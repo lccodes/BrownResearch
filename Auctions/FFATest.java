@@ -24,7 +24,7 @@ public class FantasyFootballAuction2 extends AuctionBase
     private String highBidder = null;
     
     /** High Bidder's budget */
-    private int Budget = 0;
+    private final int BUDGET = 200;
 
     /** The value of the highest bid */
     private int highBid = 0;
@@ -98,7 +98,7 @@ public class FantasyFootballAuction2 extends AuctionBase
             args.put("bidderId", highBidder);
             args.put("bid", Integer.toString(highBid));
             //New budget feature
-            args.put("bidderBudget", Integer.toString(Budget-highBid));
+            //args.put("bidderBudget", Integer.toString(Budget-highBid));
         }
         sendMessage("stop", args);
     }
@@ -109,7 +109,7 @@ public class FantasyFootballAuction2 extends AuctionBase
 
             // Verify this message contains the correct keys
             if (!args.containsKey("sessionId") || !args.containsKey("auctionId") ||
-                !args.containsKey("bidderId") || !args.containsKey("bid") || !args.containsKey("bidderBudget")) {
+                !args.containsKey("bidderId") || !args.containsKey("bid")) {
                 throw new IllegalArgumentException("Invalid bid message");
             }
 
@@ -119,7 +119,7 @@ public class FantasyFootballAuction2 extends AuctionBase
             String msgBidderId = args.get("bidderId");
             int msgBid = Integer.parseInt(args.get("bid"));
             // New budget feature
-            int currentBudget = Integer.parseInt(args.get("bidderBudget"));
+            //int currentBudget = Integer.parseInt(args.get("bidderBudget"));
 
             // Silently ignore this message as it was not meant for us.
             if (msgSessionId != sessionId || msgAuctionId != auctionId) {
@@ -127,11 +127,9 @@ public class FantasyFootballAuction2 extends AuctionBase
             }
 
             // Check for high bid
-            if (highBid < msgBid && msgBid <= currentBudget) {
+            if (highBid < msgBid && msgBid <= BUDGET) {
                 highBidder = msgBidderId;
                 highBid = msgBid;
-                //Save high bidder's budget
-                Budget = currentBudget;
 
                 // Increase the end time if necessary
                 long currTime = System.currentTimeMillis();
