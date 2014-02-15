@@ -7,7 +7,8 @@ import java.util.Vector;
 import jack.server.*;
 
 /**
- * The FantasyFootballAuction2 class is the same as FFA.java except implements a budget constraint
+ * The FantasyFootballAuction class implements a single ascending auction within
+ * the FantastFootballAuctionDraft.
  */
 public class FantasyFootballAuction2 extends AuctionBase
 {
