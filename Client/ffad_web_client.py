@@ -114,6 +114,7 @@ class Receiver():
 
         draft_id = args['sessionId']
         name = args['bidderId']
+        #should this be bidderBudget
         budget = int(args['budget'])
 
         draft = Draft.objects.get(id=draft_id)
@@ -210,7 +211,11 @@ class Receiver():
             manager_id = args['bidderId']
             bid = int(args['bid'])
             manager = Manager.objects.get(draft=draft, id=manager_id)
+            #TODO: The java file sends a new budget that should be called here
+            #after tests this:
             manager.budget -= bid
+            #will be replaced by
+            #manager.budget = int(args['bidderBudget']);
             manager.save()
             player.manager = manager
             player.bid = bid
