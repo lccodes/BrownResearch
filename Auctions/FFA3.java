@@ -9,7 +9,7 @@ import jack.server.*;
 /**
  * FFA3 works with the expiremental scheduler
  */
-public class FantasyFootballAuction2 extends AuctionBase
+public class FFA3 extends AuctionBase
 {
     /** The maximum amount of time given to bidders after a new bid (ms) */
     private final long MAX_TIMEOUT = 30000;
@@ -39,9 +39,9 @@ public class FantasyFootballAuction2 extends AuctionBase
      * Constructs a single ascending auction as part of a draft
      * @param auctionId The unqiue id of this auction within the draft.
      */
-    public FantasyFootballAuction2 (int auctionId) {
+    public FFA3 (int auctionId) {
         super(auctionId);
-        putHandler("bid", new BidHandler());
+        putHandler("bid", new BidHandler2());
     }
 
     @Override
@@ -116,7 +116,7 @@ public class FantasyFootballAuction2 extends AuctionBase
         sendMessage("stop", args);
     }
 
-    private class BidHandler implements MessageHandler {
+    private class BidHandler2 implements MessageHandler {
         public void handle(Map<String, String> args) throws IllegalArgumentException {
             System.out.println("BidHandler::handle()");
 
