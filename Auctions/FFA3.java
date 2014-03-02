@@ -151,6 +151,7 @@ public class FFA3 extends AuctionBase
                 highBidder = msgBidderId;
                 highBid = msgBid;
                 //Save high bidder's budget
+                currentBudget -= msgBid;
                 budgets.put(msgBidderId, currentBudget);
 
                 // Increase the end time if necessary

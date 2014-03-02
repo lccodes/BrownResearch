@@ -39,7 +39,7 @@ public class FFATest extends AuctionBase
      * Constructs a single ascending auction as part of a draft
      * @param auctionId The unqiue id of this auction within the draft.
      */
-    public FFATest (int auctionId) {
+    public FFATest(int auctionId) {
         super(auctionId);
         putHandler("bid", new BidHandler2());
     }

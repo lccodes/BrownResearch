@@ -203,6 +203,8 @@ public class Scheduler {
      * tasks remaining. Any auction that is passed to this function which has
      * not been explicitly added tot he scheduler will be ignored.
      * @param auctions Map of auctions indexed by their unique identification
+     * 
+     * NOTE: Here is where the budget is implemented
      *
      * TODO: This function does not check that a given schedule can be executed
      * before hand. It would be useful to try and topologically sort the
@@ -230,7 +232,6 @@ public class Scheduler {
             while (true) {
 
                 // Get the set of endable auctions and try to end them
-
                 Set<AuctionBase> endableAuctions = getEndables(auctions);
                 for (AuctionBase auction : endableAuctions) {
                 	/**Grab the budgets from the last auction */
@@ -255,7 +256,9 @@ public class Scheduler {
                 Set<AuctionBase> startableAuctions = getStartables(auctions);
                 for (AuctionBase auction : startableAuctions) {
                 	/**Hand the budgets off to the next auction */
-                	auction.setBudgets(budgets);
+                	if(budgets != null){
+                		auction.setBudgets(budgets);
+                	}
                     threadPool.execute(auction);
                 }
 

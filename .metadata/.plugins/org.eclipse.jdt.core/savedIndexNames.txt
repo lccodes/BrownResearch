@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+/home/luke/Documents/GitHub/BrownResearch/.metadata/.plugins/org.eclipse.jdt.core
