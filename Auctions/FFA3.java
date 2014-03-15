@@ -25,6 +25,9 @@ public class FFA3 extends AuctionBase
 
     /** The value of the highest bid */
     private int highBid = 0;
+    
+    /** The value of the current high bidder's budget */
+    private int highBudget = 0;
 
     /** The time that this auction should end */
     private long endTime = 0;
@@ -67,6 +70,13 @@ public class FFA3 extends AuctionBase
      */
     public void setBudgets(Map<String, Integer> newBudgets){
     	budgets = newBudgets;
+    }
+    
+    /**
+     * New class to update the budget
+     */
+    public void updateBudgets(){
+        budgets.put(highBidder, (highBudget-highBid));
     }
 
     @Override
@@ -150,9 +160,6 @@ public class FFA3 extends AuctionBase
             if (highBid < msgBid && msgBid <= currentBudget) {
                 highBidder = msgBidderId;
                 highBid = msgBid;
-                //Save high bidder's budget
-                currentBudget -= msgBid;
-                budgets.put(msgBidderId, currentBudget);
 
                 // Increase the end time if necessary
                 long currTime = System.currentTimeMillis();
