@@ -235,6 +235,7 @@ public class Scheduler {
                 Set<AuctionBase> endableAuctions = getEndables(auctions);
                 for (AuctionBase auction : endableAuctions) {
                 	/**Grab the budgets from the last auction */
+                	auction.updateBudgets();
                 	budgets = auction.getBudgets();
                     auction.tryEnd();
                 }
