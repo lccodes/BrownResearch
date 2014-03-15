@@ -154,12 +154,12 @@ public class FFA3 extends AuctionBase
             	budgets.put(msgBidderId, 200);
             	currentBudget = 200;
             }
-            
 
             // Check for high bid
             if (highBid < msgBid && msgBid <= currentBudget) {
                 highBidder = msgBidderId;
                 highBid = msgBid;
+                highBudget = currentBudget;
 
                 // Increase the end time if necessary
                 long currTime = System.currentTimeMillis();
