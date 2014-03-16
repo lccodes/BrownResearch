@@ -153,6 +153,10 @@ public class FFA3 extends AuctionBase
             if(currentBudget == null){
             	budgets.put(msgBidderId, 200);
             	currentBudget = 200;
+            }else{
+                currentBudget = budgets.get(msgBidderId);
+            }
+
             }
 
             // Check for high bid
