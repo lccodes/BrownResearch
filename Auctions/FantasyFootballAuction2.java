@@ -8,6 +8,7 @@ import jack.server.*;
 
 /**
  * The FantasyFootballAuction2 class is the same as FFA.java except implements a budget constraint
+ * which only lasts for one auction.
  */
 public class FantasyFootballAuction2 extends AuctionBase
 {
