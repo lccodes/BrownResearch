@@ -1,0 +1,16 @@
+Schedule valuation is taken from the Market Scheduling game designed and studied by Michael Wellman and others.
+
+Value: bounds on the value of completing a job
+# slots required: range for the number of time slots needed to complete a job
+deadline: range for the slot after which the agent receives no value. 
+
+The agent has a job that takes a given number of time slots to complete 
+and gets the value based on when they complete their job. 
+
+For example:
+
+Slot |  1   2   3   4  5
+Value| 45  33  21  15  9
+
+If the agent need 2 slots and wins slots 1, 3 and 5 they will gain value = 33.
+

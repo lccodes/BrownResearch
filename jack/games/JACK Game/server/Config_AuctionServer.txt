@@ -1,0 +1,13 @@
+Host_IP:local
+Port_Number:1300
+Min_Number_Clients:1
+Max_Number_Clients:10
+Max_Wait_For_Clients:60000
+Response_Time:15000
+Full_Response_Time:true
+Server_Log_File:Log_AuctionServer.txt
+Server_Results_File:Results_AuctionServer.txt
+Auction_Type:SequentialAuction
+Auction_Config_File:Config_SequentialAuction_0.txt
+Valuation_Type:Additive
+Valuation_Config_File:Config_ValuationAdditive.txt

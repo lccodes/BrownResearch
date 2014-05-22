@@ -1,0 +1,14 @@
+Set the specific variables for basic simulator setup here.
+The configuration files generated will be saved in a folder named with the "Game Name".
+The min and max for the clients will control how many clients the server waits for or allows.
+
+The number of simultaneous and sequential auctions sets up the size of the auction schedule. 
+i.e. If you want 3 sequential auctions Number of Sequential should be 3 
+and "Number of Simultaneous" should be 1.
+
+Then number of goods sets how many different types of goods will be sold in the auctions. 
+These good types can be assigned to more than one auction.
+
+The IP address type should be local unless you are running clients on different networks. 
+
+Port 1300 is generally available across platforms.

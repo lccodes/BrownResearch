@@ -1,0 +1,298 @@
+/**
+ * @author TJ Goff  goff.tom@gmail.com
+ * @version 1.0.0
+ *
+ * This library is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU Lesser General Public License version 2.1 as published by the
+ * Free Software Foundation
+ *
+ * Sell one or more goods using a Descending Price Auction mechanism (also called
+ * "Dutch" auctions).  Each good has it's own sub-auction, and the main auction
+ * ends only when each sub-auction has closed (either by passing its reserve price
+ * or because a client placed a winning bid).  Clients see when one of the
+ * sub-auctions closes, who, if anyone, won the good, and what the price was.
+ * Observing some sub-auctions close earlier will give clients info that they can
+ * use when considering their bids for the sub-auctions that are still open.
+ */
+package jack.auctions;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Random;
+import java.util.Vector;
+
+import jack.server.*;
+
+
+public class DescendingPriceAuction implements Auction
+{
+    Vector<ComThread> threads;//threads that communicate with clients
+    Vector<String> goods = new Vector<String>();
+    Vector<Integer> prices = new Vector<Integer>();//Track the prices as they descend
+    Vector<Integer> reservePrices = new Vector<Integer>();//Reserve price for each good
+    Vector<Integer> winners = new Vector<Integer>();//store indices of winner 'threads'
+    Vector<String> purchases = new Vector<String>();//store records of purchass: "ID good cost"
+
+    boolean[] active;//used to track which sub-auctions are still active
+    int[][] bids;//Clients can set bids that kick in automatically when price reaches their bid
+    String configFile = new String("Config_DescendingPriceAuction.txt");//default config file
+    long responseTime = 10000;//wait time (in ms) for clients to respond (default= 10s)
+    boolean fullResponseTime = false;
+
+    /**
+     * Constructor
+     * @param threads List of ComThread objects that handle communication with client
+     * @param configFile File which specifies parameters for the auction
+     */
+    public DescendingPriceAuction(Vector<ComThread> threads, String configFile){
+        this.threads = threads;
+        this.configFile = configFile;
+        AuctionServer.writeToLogFile("Constructed DescendingPriceAuction("+
+                threads.size()+ " threads, Config_File: "+configFile+")", 10);
+    }
+
+    /**
+     * Import a Vector of threads used to communicate with clients
+     * @param threads List of ComThread objects that handle communication with client
+     */
+    public void setComThreads(Vector<ComThread> threads) {
+        this.threads = threads;
+        AuctionServer.writeToLogFile("DescendingPriceAuction.setThreads("+
+                threads.size()+ " threads)", 10);
+    }
+
+    /**
+     * Run the entire auction, and record the outcome
+     */
+    public Vector<String> runFullAuction(){
+        //Read in configuration file and setup the auction
+        setupAuction();
+        //Send information about auction to clients and prompt for bids...
+        runAuction();
+        //After setting up and running the auction, determine winner and report to clients
+        resolveAuction();
+        AuctionServer.writeToLogFile("DescendingPriceAuction.runFullAuction() complete", 10);
+        return getFinalResult();
+    }
+
+    /**
+     * Read in configuration file and setup the auction
+     */
+    public void setupAuction(){
+        AuctionServer.writeToLogFile("DescendingPriceAuction.setup() starting", 10);
+        try{
+            DataInputStream in = new DataInputStream(new FileInputStream("src/auctions/"+configFile));
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+            System.out.println("\n\nImporting settings from " + configFile);
+            String currLine;
+            while ((currLine = br.readLine()) != null) {
+                if (currLine.isEmpty()) {
+                    continue;//skip blank lines
+                } else if (currLine.contains("Response_Time")) {
+                    String[] settings = currLine.split(" ");
+                    for(String setting : settings){
+                        if (setting.startsWith("Response_Time:")) {
+                            responseTime = Long.parseLong(setting.split(":")[1]);
+                        } else if (setting.startsWith("Full_Response_Time:")) {
+                            fullResponseTime = Boolean.parseBoolean(setting.split(":")[1]);
+                        }
+                    }
+                    continue;
+                }
+
+                //get auction type and configuration file name
+                HashMap<String, String> currParams = AuctionServer.getParamValuePairs(currLine);
+
+                //Create an auction to be added to queue
+                //defaults gets overwritten by param values
+                String currGood = "good";
+                if (currParams.containsKey("Good")) {
+                	System.out.println("Here4");
+                    currGood = currParams.get("Good");
+                }
+                goods.add( currGood );
+                Integer currPrice = new Integer(1);
+                if (currParams.containsKey("Start_Price")) {
+                    currPrice = Integer.parseInt( currParams.get("Start_Price") );
+                }
+                prices.add( currPrice );
+                Integer currReserve = new Integer(0);
+                if(currParams.containsKey("Reserve")) {
+                    currReserve = Integer.parseInt( currParams.get("Reserve") );
+                }
+                reservePrices.add( currReserve );
+
+                // Print the config settings on the console
+                System.out.println( "Good:" + currGood + ", Start_Price:" +
+                        currPrice+", Reserve:"+currReserve);
+            }
+            in.close();//Close the input stream
+
+            //Known number of goods, make arrays of that length to store variables
+            active = new boolean[goods.size()];
+            bids = new int[threads.size()][goods.size()];//initialized at 0
+            winners = new Vector<Integer>();
+            for (int i=0; i < active.length; i++) {
+                active[i] = true;
+                winners.add(new Integer(-1));//indicates no winner
+            }
+        } catch (Exception e) {
+              System.err.println("Error: " + e.getMessage());
+              AuctionServer.writeToLogFile("Caught Exception: "+e.getMessage(), 0);
+        }
+        AuctionServer.writeToLogFile("DescendingPriceAuction.setup() complete", 10);
+    }
+
+    /**
+     * Send information about auction to clients and prompt for bids until no new bids are entered
+     */
+    public void runAuction() {
+        AuctionServer.writeToLogFile("DescendingPriceAuction.runAuction() starting", 10);
+        //Run descending price auction until all sub-auctions have closed
+        System.out.println(active[0]);
+        while (!areAllAuctionsClosed(active)) {
+            //report current prices to all clients, as part of description of state
+            String desc = "DescendingPriceAuction.  Open Auctions:";
+            for (int i=0; i < goods.size(); i++) {
+                if (active[i]) {
+                    desc = desc + " Good: " + goods.get(i) + " Price:" + prices.get(i) +
+                                  " ReservePrice:" + reservePrices.get(i) + ",";
+                }
+            }
+            desc = desc.substring(0, desc.length()-1) + ". Closed Auctions:";//remove trailing ","
+            //closed auctions
+            for (int i=0; i < goods.size(); i++) {
+                if (!active[i]) {
+                    desc = desc + " Good: " + goods.get(i) + " Bid:" + prices.get(i) +
+                           " Winner:" + threads.get(winners.get(i)).getClientID()+ ",";
+                }
+            }
+            desc = desc.substring(0, desc.length()-1);//remove trailing ","
+            //Send the description of auction(s) to all clients
+            AuctionServer.sendToAllWaitForResponses(threads, desc, responseTime,
+                    fullResponseTime, "0");
+
+            //prompt for bids. Clients submit one bid per sub-auction, even if "0"
+            String def = "";
+            for (int p=0; p < goods.size(); p++) {
+                def = def + " 0";
+            }
+            def = def.substring(1);//remove leading " "
+            AuctionServer.sendToAllWaitForResponses(threads, "Enter Bid(s)", responseTime,
+                    fullResponseTime, def);
+
+            //update records of bids.  If a sub-auction is still open, allow clients
+            //to over-write their previous pre-bids, where client names a price point
+            //ahead of time, and their bid executes when the price reaches that point.
+            for (int c=0; c < threads.size(); c++) {
+                String[] parts = threads.get(c).getClientMsg().split(" ");
+                if (parts.length != goods.size()) {
+                    continue;//number of bids MUST match number of goods/sub-auctions
+                }
+                for (int p=0; p < goods.size(); p++) {
+                    if (active[p]) {
+                        bids[c][p] = Integer.parseInt(parts[p]);
+                    }
+                }
+            }
+
+            //check win conditions, break ties, close auctions
+            for(int p=0; p < goods.size(); p++){
+                if (!active[p]) {
+                    continue;//this sub-auction is closed
+                }
+                Vector<Integer> currWinners = new Vector<Integer>();
+                for (int c=0; c < threads.size(); c++) {
+                    if (bids[c][p] >= prices.get(p).intValue()) {
+                        currWinners.add(new Integer(c));
+                    }
+                }
+                //break ties randomly
+                Random rand = new Random();
+                while (currWinners.size() > 1) { //remove random winner until only 1
+                    currWinners.remove(rand.nextInt(currWinners.size()));
+                }
+                if (!currWinners.isEmpty()) { //there was a winner!
+                    //put winner in persistent record
+                    winners.set(p, currWinners.get(0));
+                    active[p] = false;//closes this sub-auction
+                } else if (prices.get(p) <= reservePrices.get(p)){
+                    active[p] = false;
+                }
+            }
+
+            //decrement prices in sub-auctions that are still open
+            for (int p=0; p < goods.size(); p++) {
+                if (active[p]) {
+                    prices.set(p, prices.get(p)-1);
+                }
+            }
+        }
+        //auction over.  Winners & costs determined from 'winners' and 'prices' (vectors)
+        AuctionServer.writeToLogFile("DescendingPriceAuction.runAuction() complete", 10);
+    }
+
+    /**
+     * After setting up and running the auction, determine winner and report to clients
+     */
+    public void resolveAuction() {
+        AuctionServer.writeToLogFile("AscendingPriceAuction.resolveAuction() starting", 10);
+        //Winners are in Vector<Integer> winners & costs are in Vector<Integer> prices.
+        //For each good, list the winnerID (if any, or else ".") and winningBid = cost
+        for (int p=0; p < goods.size(); p++) {
+            if (winners.get(p).intValue() >= 0) { //if there is a winner for this good
+                String winnerId = threads.get(winners.get(p)).getClientID();
+                purchases.add(winnerId + " " + goods.get(p) + " " + prices.get(p));
+                AuctionServer.sendToAllWaitForResponses(threads,
+                        "Purchase Agent:"+winnerId+" Good:" + goods.get(p) +
+                        " Cost:"+prices.get(p), 0, false, "0");
+                AuctionServer.writeToResultsFile("Purchase Agent:"+winnerId+" Good:" + goods.get(p) +
+                        " Cost:"+prices.get(p));
+            }
+        }
+        AuctionServer.writeToLogFile("DescendingPriceAuction.resolveAuction() complete", 10);
+    }
+
+    /**
+     * Call after auction has run to get a list of Strings encoding all purchases
+     */
+    public Vector<String> getFinalResult(){
+        return purchases;
+    }
+
+
+    /**
+     * Return a String encoding information about the auction: [type, good, reservePrice]
+     */
+    public String getDescription(){
+        //Construct a description of the sub-auctions
+        String desc = "DescendingPriceAuction [";
+        for (int p=0; p < goods.size(); p++) {
+            desc = desc + " " + goods.get(p) + " " + prices.get(p) + " "
+                        + reservePrices.get(p) + ",";
+        }
+        //remove trailing ","
+        desc = desc.substring(0, desc.length()-1) + "]";
+        return desc;
+    }
+
+    /**
+     * Given an array of booleans, denoting whether the I'th sub-auction is active,
+     * @param active boolean[] listing whether each sub-auction is closed.
+     * @return boolean True if every sub-auction is closed.
+     */
+    private static boolean areAllAuctionsClosed(boolean[] active){
+    	System.out.println(active[0]);//added here
+        for (int i=0; i < active.length; i++) {
+            if (active[i] == true) {//this sub-auction is still open/active
+                return false;
+            }
+        }
+        return true;
+    }
+
+}

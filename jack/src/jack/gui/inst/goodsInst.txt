@@ -1,0 +1,3 @@
+The auction slots are the same as on the "Auction Schedule" tab. 
+After clicking a slot, click "add" to set what good to auction. 
+You can also rename the goods, and clicking on a slot again unassigns it.

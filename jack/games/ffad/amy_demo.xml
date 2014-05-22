@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jack>
+	
+    <schedule>
+      <sequential>
+         <task auctionId="3"/>
+         <task auctionId="1"/>
+         <task auctionId="2"/>
+      </sequential>
+    </schedule>
+
+    <auction id="1" type="FantasyFootballAuction">
+	<order>2</order>
+	<name>Luke Camery</name>
+	<team>CS-Econ</team>
+	<position>QB</position>
+	<estValue>100</estValue>
+    </auction>
+ 
+    <auction id="2" type="FantasyFootballAuction">
+	<order>3</order>
+	<name>Amy Greenwald</name>
+	<team>GLAMOR</team>
+	<position>K</position>
+	<estValue>200</estValue>
+    </auction>
+ 
+    <auction id="3" type="FantasyFootballAuction">
+	<order>1</order>
+	<name>Gabe</name>
+	<team>League</team>
+	<position>TE</position>
+	<estValue>1</estValue>
+    </auction>
+</jack>

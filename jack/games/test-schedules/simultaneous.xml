@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jack>
+    <schedule>
+        <simultaneous>
+            <task auctionId="1"/>
+            <task auctionId="2"/>
+            <task auctionId="3"/>
+            <task auctionId="4"/>
+            <task auctionId="5"/>
+            <task auctionId="6"/>
+            <task auctionId="7"/>
+            <task auctionId="8"/>
+            <task auctionId="9"/>
+        </simultaneous>
+    </schedule>
+</jack>

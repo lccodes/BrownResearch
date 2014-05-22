@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd bin
+jdb jack.server.AuctionServer $1
