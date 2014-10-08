@@ -1,66 +1,3 @@
-cd 007e3a3f0/
-ls
-cat 007e3a3f0
-cat 007e3a3f0.txt 
-cd ..
-cd d21d6df7a/
-ls -l
-cd ..
-ls -l
-cd fc21813d4/
-cat fc21813d4.txt 
-cd ..
-ls
-cd 9968a9cc0/
-ks
-ls
-cat 9968a9cc0
-cat 9968a9cc0.txt 
-cd ,,
-cd ..
-cat views.txt 
-cd d55c77050/
-cat d55c77050.txt 
-ls
-cd /vol/web/html/
-cat matchupTwo.txt 
-sudo vim haha
-sudo vim haha
-sudo vim haha
-sudo vim haha
-ls
-floor 2
-floor
-pkill workrave
-cd /vol/web/html/
-ls
-cat data.php 
-sudo vim data.php 
-vim ~/.vimrc
-vim ~/.vimrc
-sudo vim data.php 
-sudo vim data.php 
-ls
-cd /vol/web/respice/admin6789/
-ls
-cd ..
-ls
-cat abcde6789.txt 
-mkdir abcde6789
-mv abcde6789.txt abcde6789
-ls -l
-sudo chmod 777 -R abcde6789/
-ls -l
-ls
-cd ..
-cd html/
-sudo vim data.php 
-cd ..
-cd respice/admin6789/
-ls
-touch admin6789-survey.txt
-ls
-ls -l
 chmod 777 admin6789-survey.txt 
 ls -l
 ls
@@ -498,3 +435,66 @@ sudo rm -rf BrownResearch/
 cd /vol/
 ls
 git add home
+cd ~/.ssh/
+ls
+ssh-keygen
+ls
+cat mykey
+cat mykey.pub 
+cd ..
+ls
+cd vol
+ls
+cd ../..
+ls
+cd vol/
+ls
+git commit -am "All Jack with web additions"
+git clone git@github.com:lccodes/BrownResearch.git
+ls
+sudo git clone git@github.com:lccodes/BrownResearch.git
+ssh-agent bash -c 
+ssh-add
+cat ~/.ssh
+cat ~/.ssh/known_hosts 
+cat ~/.ssh/mykey.pub 
+ssh-add ~/.ssh/mykey.pub 
+ssh
+ls
+cat ~/.ssh/mykey.pub | ssh lcamery@jack "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+cat ~/.ssh/authorized_keys 
+ssh-key-setup ~/.ssh/mykey.pub 
+ssh-add 
+ssh-argv0 
+ssh help
+ssh --help
+git pull git@github.com:lccodes/BrownResearch.git
+sudo su
+cd /root/
+sudo su
+cd home/lcamery/
+ls
+ls -al ~/.ssh/
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/mykey
+ssh -T git@github.com
+cd ../..
+ls
+rm id_rsa
+rm id_rsa
+sudo rm id_rsa
+sudo rm id_rsa.pub 
+ls
+git
+ssh -T git@github.com
+ls
+git clone git@github.com:lccodes/BrownResearch.git
+sudo git clone git@github.com:lccodes/BrownResearch.git
+git pull git@github.com:lccodes/BrownResearch.git
+sudo git pull git@github.com:lccodes/BrownResearch.git
+sudo ssh -T git@github.com
+sudo ls -al ~/.ssh/
+sudo eval "$(ssh-agent -s)"
+eval
+sudo eval
+sudo su
