@@ -1,0 +1,717 @@
+Downloading/unpacking matplotlib
+  Getting page https://pypi.python.org/simple/matplotlib/
+  URLs to search for versions for matplotlib:
+  * https://pypi.python.org/simple/matplotlib/
+  Analyzing links from page https://pypi.python.org/simple/matplotlib/
+    Skipping https://pypi.python.org/packages/2.6/m/matplotlib/matplotlib-1.4.0-cp26-none-win32.whl#md5=774d62b98c9a7bcfcf29b65c0b3bb056 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/2.6/m/matplotlib/matplotlib-1.4.0-cp26-none-win_amd64.whl#md5=198652a75d184f4f6900f74fb9d68a7f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.0-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=19649b0bbb78ef3a2cce1e1c64cbb78f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.0-cp27-none-win32.whl#md5=bf8dfe71fd37d209d7287d4e0565f02b (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.0-cp27-none-win_amd64.whl#md5=f3f581901736f547e3e1e4d8f2b0872a (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.2/m/matplotlib/matplotlib-1.4.0-cp32-none-win32.whl#md5=3e508b3e606cdf49f8301f5a513cafba (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.2/m/matplotlib/matplotlib-1.4.0-cp32-none-win_amd64.whl#md5=d41dae609c981068207b1a5ea93cb066 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.0-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=16d28bb4a986eb550a66e463f7b0494f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.0-cp33-none-win32.whl#md5=015470511cc3f7f39ae26b502a0c5ff6 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.0-cp33-none-win_amd64.whl#md5=324189994b669b6a877f22084db86044 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.0-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=9f3be17be6556edcae2abfb2137c3c90 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.0-cp34-none-win32.whl#md5=d4bb6a18cb529858ff05be03f958fc66 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.0-cp34-none-win_amd64.whl#md5=84bba66e4aa7101005f7503708c186ac (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.3.1-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=ea9eb2cf47e4ca76395077c247644b2f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.3.1-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=c274d751c438b69b478cb617503c3231 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.3.1-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=2c5ed43ecbddb347ef5e59cbfd42b366 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.86.1.tar.gz#md5=d3727dc75c4c1cff0b0bae856b4e5ad8 (from https://pypi.python.org/simple/matplotlib/), version: 0.86.1
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.86.2.tar.gz#md5=9bb3f2b70a26e131c6b10743e8c49fc5 (from https://pypi.python.org/simple/matplotlib/), version: 0.86.2
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.86.tar.gz#md5=4770cbcddabcbab72d48fbb237ed5d8c (from https://pypi.python.org/simple/matplotlib/), version: 0.86
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.91.0.tar.gz#md5=059aa32556644760aef9cec9fb8fc3ac (from https://pypi.python.org/simple/matplotlib/), version: 0.91.0
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.91.1.tar.gz#md5=56a9344b077b5accbc4823be19f69dd6 (from https://pypi.python.org/simple/matplotlib/), version: 0.91.1
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.0.1.tar.gz#md5=2196c0482d5b33dc8d33f67bbafc1323 (from https://pypi.python.org/simple/matplotlib/), version: 1.0.1
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.1.0.tar.gz#md5=091a4d08c6f9fd7e5f7f63adc1abc351 (from https://pypi.python.org/simple/matplotlib/), version: 1.1.0
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.1.1.tar.gz#md5=30ee59119599331bf1f3b6e838fee9a8 (from https://pypi.python.org/simple/matplotlib/), version: 1.1.1
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.3.1.tar.gz#md5=789699851de28a543f3d244cf657ff68 (from https://pypi.python.org/simple/matplotlib/), version: 1.3.1
+    Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.0.tar.gz#md5=1daf7f2123d94745feac1a30b210940c (from https://pypi.python.org/simple/matplotlib/), version: 1.4.0
+    Skipping link http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/); not a file
+    Skipping link http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/); not a file
+    Skipping link http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+    Skipping link http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+    Skipping link http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.0/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .0
+    Skipping link http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.1/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .1
+    Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.0/matplotlib-1.2.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+    Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.1/matplotlib-1.2.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+    Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.0/matplotlib-1.3.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+    Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+    Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.0/matplotlib-1.4.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+    Skipping link https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=278194 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+    Skipping link https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+    Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.1/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .1
+    Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.3/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .3
+    Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .0
+    Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0.1/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .1
+    Skipping https://svn.sourceforge.net/svnroot/matplotlib/trunk/matplotlib#egg=matplotlib-dev (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.0/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.1/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.0/matplotlib-1.2.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.1/matplotlib-1.2.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.0/matplotlib-1.3.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.0/matplotlib-1.4.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=278194 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=278194 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.1/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.3/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0.1/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+  Using version 1.4.0 (newest of versions: 1.4.0, 1.3.1, 1.1.1, 1.1.0, 1.0.1, 0.91.1, 0.91.0, 0.86.2, 0.86.1, 0.86)
+  Downloading from URL https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.0.tar.gz#md5=1daf7f2123d94745feac1a30b210940c (from https://pypi.python.org/simple/matplotlib/)
+  Running setup.py (path:/tmp/pip_build_gbankman/matplotlib/setup.py) egg_info for package matplotlib
+    Downloading http://pypi.python.org/packages/source/d/distribute/distribute-0.6.28.tar.gz
+    Extracting in /tmp/tmpJRK4ip
+    Now working in /tmp/tmpJRK4ip/distribute-0.6.28
+    Building a Distribute egg in /tmp/pip_build_gbankman/matplotlib
+    /tmp/pip_build_gbankman/matplotlib/distribute-0.6.28-py2.6.egg
+    ============================================================================
+    Edit setup.cfg to change the build options
+    
+    BUILDING MATPLOTLIB
+                matplotlib: yes [1.4.0]
+                    python: yes [2.6.6 (r266:84292, Aug 12 2014, 07:57:00)  [GCC
+                            4.4.5]]
+                  platform: yes [linux2]
+    
+    REQUIRED DEPENDENCIES AND EXTENSIONS
+                     numpy: yes [not found. pip may install it below.]
+                       six: yes [six was not found.]
+                  dateutil: yes [using dateutil version 1.4.1]
+                   tornado: yes [tornado was not found. It is required for the
+                            WebAgg backend. pip/easy_install may attempt to
+                            install it after matplotlib.]
+                 pyparsing: yes [pyparsing was not found. It is required for
+                            mathtext support. pip/easy_install may attempt to
+                            install it after matplotlib.]
+                     pycxx: yes [Couldn't import.  Using local copy.]
+                    libagg: yes [pkg-config information for 'libagg' could not
+                            be found. Using local copy.]
+                  freetype: yes [version 2.4.2]
+                       png: yes [pkg-config information for 'libpng' could not
+                            be found. Using unknown version.]
+                     qhull: yes [pkg-config information for 'qhull' could not be
+                            found. Using local copy.]
+    
+    OPTIONAL SUBPACKAGES
+               sample_data: yes [installing]
+                  toolkits: yes [installing]
+                     tests: yes [nose 0.11.1 or later is required to run the
+                            matplotlib test suite.  pip/easy_install may attempt
+                            to install it after matplotlib. / mock is required
+                            to run the matplotlib test suite.  pip/easy_install
+                            may attempt to install it after matplotlib.]
+            toolkits_tests: yes [nose 0.11.1 or later is required to run the
+                            matplotlib test suite.  pip/easy_install may attempt
+                            to install it after matplotlib. / mock is required
+                            to run the matplotlib test suite.  pip/easy_install
+                            may attempt to install it after matplotlib.]
+    
+    OPTIONAL BACKEND EXTENSIONS
+                    macosx: no  [Mac OS-X only]
+                    qt5agg: no  [PyQt5 not found]
+                    qt4agg: no  [PyQt4 not found]
+                    pyside: no  [PySide not found]
+                   gtk3agg: no  [Requires pygobject to be installed.]
+    Running from numpy source directory.
+    /bin/sh: svnversion: not found
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1526: UserWarning:
+        Atlas (http://math-atlas.sourceforge.net/) libraries not found.
+        Directories to search for the libraries can be specified in the
+        numpy/distutils/site.cfg file (section [atlas]) or by setting
+        the ATLAS environment variable.
+      warnings.warn(AtlasNotFoundError.__doc__)
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1535: UserWarning:
+        Blas (http://www.netlib.org/blas/) libraries not found.
+        Directories to search for the libraries can be specified in the
+        numpy/distutils/site.cfg file (section [blas]) or by setting
+        the BLAS environment variable.
+      warnings.warn(BlasNotFoundError.__doc__)
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1538: UserWarning:
+        Blas (http://www.netlib.org/blas/) sources not found.
+        Directories to search for the sources can be specified in the
+        numpy/distutils/site.cfg file (section [blas_src]) or by setting
+        the BLAS_SRC environment variable.
+      warnings.warn(BlasSrcNotFoundError.__doc__)
+    /bin/sh: svnversion: not found
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1432: UserWarning:
+        Atlas (http://math-atlas.sourceforge.net/) libraries not found.
+        Directories to search for the libraries can be specified in the
+        numpy/distutils/site.cfg file (section [atlas]) or by setting
+        the ATLAS environment variable.
+      warnings.warn(AtlasNotFoundError.__doc__)
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1443: UserWarning:
+        Lapack (http://www.netlib.org/lapack/) libraries not found.
+        Directories to search for the libraries can be specified in the
+        numpy/distutils/site.cfg file (section [lapack]) or by setting
+        the LAPACK environment variable.
+      warnings.warn(LapackNotFoundError.__doc__)
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1446: UserWarning:
+        Lapack (http://www.netlib.org/lapack/) sources not found.
+        Directories to search for the sources can be specified in the
+        numpy/distutils/site.cfg file (section [lapack_src]) or by setting
+        the LAPACK_SRC environment variable.
+      warnings.warn(LapackSrcNotFoundError.__doc__)
+    /usr/lib/python2.6/distutils/dist.py:266: UserWarning: Unknown distribution option: 'define_macros'
+      warnings.warn(msg)
+                 gtk3cairo: no  [Requires cairocffi or pycairo to be installed.]
+                    gtkagg: no  [Requires pygtk]
+                     tkagg: no  [TKAgg requires Tkinter.]
+                     wxagg: no  [requires wxPython]
+                       gtk: no  [Requires pygtk]
+                       agg: yes [installing]
+                     cairo: no  [cairocffi or pycairo not found]
+                 windowing: no  [Microsoft Windows only]
+    
+    OPTIONAL LATEX DEPENDENCIES
+                    dvipng: no
+               ghostscript: no
+                     latex: no
+                   pdftops: no
+    
+    non-existing path in 'numpy/distutils': 'site.cfg'
+    non-existing path in 'numpy/f2py': 'docs'
+    non-existing path in 'numpy/f2py': 'f2py.1'
+    non-existing path in 'numpy/lib': 'benchmarks'
+    Could not locate executable gfortran
+    Could not locate executable f95
+    Could not locate executable ifort
+    Could not locate executable ifc
+    Could not locate executable lf95
+    Could not locate executable pgfortran
+    Could not locate executable f90
+    Could not locate executable f77
+    Could not locate executable fort
+    Could not locate executable efort
+    Could not locate executable efc
+    Could not locate executable g77
+    Could not locate executable g95
+    Could not locate executable pathf95
+    don't know how to compile Fortran code on platform 'posix'
+    _configtest.c:1: warning: conflicting types for built-in function 'exp'
+    _configtest.o: In function `main':
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/_configtest.c:6: undefined reference to `exp'
+    collect2: ld returned 1 exit status
+    _configtest.c:1: warning: conflicting types for built-in function 'exp'
+    _configtest.c:1:20: error: Python.h: No such file or directory
+    _configtest.o: In function `main':
+    /tmp/easy_install-3gjn1X/numpy-1.9.0/_configtest.c:6: undefined reference to `exp'
+    collect2: ld returned 1 exit status
+    _configtest.c:1:20: error: Python.h: No such file or directory
+    Traceback (most recent call last):
+      File "<string>", line 17, in <module>
+      File "/tmp/pip_build_gbankman/matplotlib/setup.py", line 267, in <module>
+        **extra_args
+      File "/usr/lib/python2.6/distutils/core.py", line 113, in setup
+        _setup_distribution = dist = klass(attrs)
+      File "build/bdist.linux-i686/egg/setuptools/dist.py", line 260, in __init__
+      File "build/bdist.linux-i686/egg/setuptools/dist.py", line 284, in fetch_build_eggs
+      File "build/bdist.linux-i686/egg/pkg_resources.py", line 563, in resolve
+      File "build/bdist.linux-i686/egg/pkg_resources.py", line 799, in best_match
+      File "build/bdist.linux-i686/egg/pkg_resources.py", line 811, in obtain
+      File "build/bdist.linux-i686/egg/setuptools/dist.py", line 327, in fetch_build_egg
+      File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 446, in easy_install
+      File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 476, in install_item
+      File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 655, in install_eggs
+      File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 930, in build_and_install
+      File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 919, in run_setup
+      File "build/bdist.linux-i686/egg/setuptools/sandbox.py", line 62, in run_setup
+      File "build/bdist.linux-i686/egg/setuptools/sandbox.py", line 105, in run
+      File "build/bdist.linux-i686/egg/setuptools/sandbox.py", line 64, in <lambda>
+      File "setup.py", line 251, in <module>
+        py_modules=py_modules,
+      File "setup.py", line 243, in setup_package
+        development and web application servers targeting multiple user
+      File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/core.py", line 169, in setup
+      File "/usr/lib/python2.6/distutils/core.py", line 152, in setup
+        dist.run_commands()
+      File "/usr/lib/python2.6/distutils/dist.py", line 975, in run_commands
+        self.run_command(cmd)
+      File "/usr/lib/python2.6/distutils/dist.py", line 995, in run_command
+        cmd_obj.run()
+      File "build/bdist.linux-i686/egg/setuptools/command/bdist_egg.py", line 167, in run
+      File "/usr/lib/python2.6/distutils/cmd.py", line 333, in run_command
+        self.distribution.run_command(command)
+      File "/usr/lib/python2.6/distutils/dist.py", line 995, in run_command
+        cmd_obj.run()
+      File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/egg_info.py", line 10, in run
+      File "/usr/lib/python2.6/distutils/cmd.py", line 333, in run_command
+        self.distribution.run_command(command)
+      File "/usr/lib/python2.6/distutils/dist.py", line 995, in run_command
+        cmd_obj.run()
+      File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 153, in run
+      File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 170, in build_sources
+      File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 329, in build_extension_sources
+      File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 386, in generate_sources
+      File "numpy/core/setup.py", line 432, in generate_config_h
+    
+      File "numpy/core/setup.py", line 42, in check_types
+        try:
+      File "numpy/core/setup.py", line 293, in check_types
+    
+    SystemError: Cannot compile 'Python.h'. Perhaps you need to install python-dev|python-devel.
+    Complete output from command python setup.py egg_info:
+    Downloading http://pypi.python.org/packages/source/d/distribute/distribute-0.6.28.tar.gz
+
+Extracting in /tmp/tmpJRK4ip
+
+Now working in /tmp/tmpJRK4ip/distribute-0.6.28
+
+Building a Distribute egg in /tmp/pip_build_gbankman/matplotlib
+
+/tmp/pip_build_gbankman/matplotlib/distribute-0.6.28-py2.6.egg
+
+============================================================================
+
+Edit setup.cfg to change the build options
+
+
+
+BUILDING MATPLOTLIB
+
+            matplotlib: yes [1.4.0]
+
+                python: yes [2.6.6 (r266:84292, Aug 12 2014, 07:57:00)  [GCC
+
+                        4.4.5]]
+
+              platform: yes [linux2]
+
+
+
+REQUIRED DEPENDENCIES AND EXTENSIONS
+
+                 numpy: yes [not found. pip may install it below.]
+
+                   six: yes [six was not found.]
+
+              dateutil: yes [using dateutil version 1.4.1]
+
+               tornado: yes [tornado was not found. It is required for the
+
+                        WebAgg backend. pip/easy_install may attempt to
+
+                        install it after matplotlib.]
+
+             pyparsing: yes [pyparsing was not found. It is required for
+
+                        mathtext support. pip/easy_install may attempt to
+
+                        install it after matplotlib.]
+
+                 pycxx: yes [Couldn't import.  Using local copy.]
+
+                libagg: yes [pkg-config information for 'libagg' could not
+
+                        be found. Using local copy.]
+
+              freetype: yes [version 2.4.2]
+
+                   png: yes [pkg-config information for 'libpng' could not
+
+                        be found. Using unknown version.]
+
+                 qhull: yes [pkg-config information for 'qhull' could not be
+
+                        found. Using local copy.]
+
+
+
+OPTIONAL SUBPACKAGES
+
+           sample_data: yes [installing]
+
+              toolkits: yes [installing]
+
+                 tests: yes [nose 0.11.1 or later is required to run the
+
+                        matplotlib test suite.  pip/easy_install may attempt
+
+                        to install it after matplotlib. / mock is required
+
+                        to run the matplotlib test suite.  pip/easy_install
+
+                        may attempt to install it after matplotlib.]
+
+        toolkits_tests: yes [nose 0.11.1 or later is required to run the
+
+                        matplotlib test suite.  pip/easy_install may attempt
+
+                        to install it after matplotlib. / mock is required
+
+                        to run the matplotlib test suite.  pip/easy_install
+
+                        may attempt to install it after matplotlib.]
+
+
+
+OPTIONAL BACKEND EXTENSIONS
+
+                macosx: no  [Mac OS-X only]
+
+                qt5agg: no  [PyQt5 not found]
+
+                qt4agg: no  [PyQt4 not found]
+
+                pyside: no  [PySide not found]
+
+               gtk3agg: no  [Requires pygobject to be installed.]
+
+Running from numpy source directory.
+
+/bin/sh: svnversion: not found
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1526: UserWarning:
+
+    Atlas (http://math-atlas.sourceforge.net/) libraries not found.
+
+    Directories to search for the libraries can be specified in the
+
+    numpy/distutils/site.cfg file (section [atlas]) or by setting
+
+    the ATLAS environment variable.
+
+  warnings.warn(AtlasNotFoundError.__doc__)
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1535: UserWarning:
+
+    Blas (http://www.netlib.org/blas/) libraries not found.
+
+    Directories to search for the libraries can be specified in the
+
+    numpy/distutils/site.cfg file (section [blas]) or by setting
+
+    the BLAS environment variable.
+
+  warnings.warn(BlasNotFoundError.__doc__)
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1538: UserWarning:
+
+    Blas (http://www.netlib.org/blas/) sources not found.
+
+    Directories to search for the sources can be specified in the
+
+    numpy/distutils/site.cfg file (section [blas_src]) or by setting
+
+    the BLAS_SRC environment variable.
+
+  warnings.warn(BlasSrcNotFoundError.__doc__)
+
+/bin/sh: svnversion: not found
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1432: UserWarning:
+
+    Atlas (http://math-atlas.sourceforge.net/) libraries not found.
+
+    Directories to search for the libraries can be specified in the
+
+    numpy/distutils/site.cfg file (section [atlas]) or by setting
+
+    the ATLAS environment variable.
+
+  warnings.warn(AtlasNotFoundError.__doc__)
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1443: UserWarning:
+
+    Lapack (http://www.netlib.org/lapack/) libraries not found.
+
+    Directories to search for the libraries can be specified in the
+
+    numpy/distutils/site.cfg file (section [lapack]) or by setting
+
+    the LAPACK environment variable.
+
+  warnings.warn(LapackNotFoundError.__doc__)
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/system_info.py:1446: UserWarning:
+
+    Lapack (http://www.netlib.org/lapack/) sources not found.
+
+    Directories to search for the sources can be specified in the
+
+    numpy/distutils/site.cfg file (section [lapack_src]) or by setting
+
+    the LAPACK_SRC environment variable.
+
+  warnings.warn(LapackSrcNotFoundError.__doc__)
+
+/usr/lib/python2.6/distutils/dist.py:266: UserWarning: Unknown distribution option: 'define_macros'
+
+  warnings.warn(msg)
+
+             gtk3cairo: no  [Requires cairocffi or pycairo to be installed.]
+
+                gtkagg: no  [Requires pygtk]
+
+                 tkagg: no  [TKAgg requires Tkinter.]
+
+                 wxagg: no  [requires wxPython]
+
+                   gtk: no  [Requires pygtk]
+
+                   agg: yes [installing]
+
+                 cairo: no  [cairocffi or pycairo not found]
+
+             windowing: no  [Microsoft Windows only]
+
+
+
+OPTIONAL LATEX DEPENDENCIES
+
+                dvipng: no
+
+           ghostscript: no
+
+                 latex: no
+
+               pdftops: no
+
+
+
+non-existing path in 'numpy/distutils': 'site.cfg'
+
+non-existing path in 'numpy/f2py': 'docs'
+
+non-existing path in 'numpy/f2py': 'f2py.1'
+
+non-existing path in 'numpy/lib': 'benchmarks'
+
+Could not locate executable gfortran
+
+Could not locate executable f95
+
+Could not locate executable ifort
+
+Could not locate executable ifc
+
+Could not locate executable lf95
+
+Could not locate executable pgfortran
+
+Could not locate executable f90
+
+Could not locate executable f77
+
+Could not locate executable fort
+
+Could not locate executable efort
+
+Could not locate executable efc
+
+Could not locate executable g77
+
+Could not locate executable g95
+
+Could not locate executable pathf95
+
+don't know how to compile Fortran code on platform 'posix'
+
+_configtest.c:1: warning: conflicting types for built-in function 'exp'
+
+_configtest.o: In function `main':
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/_configtest.c:6: undefined reference to `exp'
+
+collect2: ld returned 1 exit status
+
+_configtest.c:1: warning: conflicting types for built-in function 'exp'
+
+_configtest.c:1:20: error: Python.h: No such file or directory
+
+_configtest.o: In function `main':
+
+/tmp/easy_install-3gjn1X/numpy-1.9.0/_configtest.c:6: undefined reference to `exp'
+
+collect2: ld returned 1 exit status
+
+_configtest.c:1:20: error: Python.h: No such file or directory
+
+Traceback (most recent call last):
+
+  File "<string>", line 17, in <module>
+
+  File "/tmp/pip_build_gbankman/matplotlib/setup.py", line 267, in <module>
+
+    **extra_args
+
+  File "/usr/lib/python2.6/distutils/core.py", line 113, in setup
+
+    _setup_distribution = dist = klass(attrs)
+
+  File "build/bdist.linux-i686/egg/setuptools/dist.py", line 260, in __init__
+
+  File "build/bdist.linux-i686/egg/setuptools/dist.py", line 284, in fetch_build_eggs
+
+  File "build/bdist.linux-i686/egg/pkg_resources.py", line 563, in resolve
+
+  File "build/bdist.linux-i686/egg/pkg_resources.py", line 799, in best_match
+
+  File "build/bdist.linux-i686/egg/pkg_resources.py", line 811, in obtain
+
+  File "build/bdist.linux-i686/egg/setuptools/dist.py", line 327, in fetch_build_egg
+
+  File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 446, in easy_install
+
+  File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 476, in install_item
+
+  File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 655, in install_eggs
+
+  File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 930, in build_and_install
+
+  File "build/bdist.linux-i686/egg/setuptools/command/easy_install.py", line 919, in run_setup
+
+  File "build/bdist.linux-i686/egg/setuptools/sandbox.py", line 62, in run_setup
+
+  File "build/bdist.linux-i686/egg/setuptools/sandbox.py", line 105, in run
+
+  File "build/bdist.linux-i686/egg/setuptools/sandbox.py", line 64, in <lambda>
+
+  File "setup.py", line 251, in <module>
+
+    py_modules=py_modules,
+
+  File "setup.py", line 243, in setup_package
+
+    development and web application servers targeting multiple user
+
+  File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/core.py", line 169, in setup
+
+  File "/usr/lib/python2.6/distutils/core.py", line 152, in setup
+
+    dist.run_commands()
+
+  File "/usr/lib/python2.6/distutils/dist.py", line 975, in run_commands
+
+    self.run_command(cmd)
+
+  File "/usr/lib/python2.6/distutils/dist.py", line 995, in run_command
+
+    cmd_obj.run()
+
+  File "build/bdist.linux-i686/egg/setuptools/command/bdist_egg.py", line 167, in run
+
+  File "/usr/lib/python2.6/distutils/cmd.py", line 333, in run_command
+
+    self.distribution.run_command(command)
+
+  File "/usr/lib/python2.6/distutils/dist.py", line 995, in run_command
+
+    cmd_obj.run()
+
+  File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/egg_info.py", line 10, in run
+
+  File "/usr/lib/python2.6/distutils/cmd.py", line 333, in run_command
+
+    self.distribution.run_command(command)
+
+  File "/usr/lib/python2.6/distutils/dist.py", line 995, in run_command
+
+    cmd_obj.run()
+
+  File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 153, in run
+
+  File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 170, in build_sources
+
+  File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 329, in build_extension_sources
+
+  File "/tmp/easy_install-3gjn1X/numpy-1.9.0/numpy/distutils/command/build_src.py", line 386, in generate_sources
+
+  File "numpy/core/setup.py", line 432, in generate_config_h
+
+
+
+  File "numpy/core/setup.py", line 42, in check_types
+
+    try:
+
+  File "numpy/core/setup.py", line 293, in check_types
+
+
+
+SystemError: Cannot compile 'Python.h'. Perhaps you need to install python-dev|python-devel.
+
+----------------------------------------
+Cleaning up...
+  Removing temporary dir /tmp/pip_build_gbankman...
+Command python setup.py egg_info failed with error code 1 in /tmp/pip_build_gbankman/matplotlib
+Exception information:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.6/dist-packages/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/usr/local/lib/python2.6/dist-packages/pip/commands/install.py", line 278, in run
+    requirement_set.prepare_files(finder, force_root_egg_info=self.bundle, bundle=self.bundle)
+  File "/usr/local/lib/python2.6/dist-packages/pip/req.py", line 1229, in prepare_files
+    req_to_install.run_egg_info()
+  File "/usr/local/lib/python2.6/dist-packages/pip/req.py", line 325, in run_egg_info
+    command_desc='python setup.py egg_info')
+  File "/usr/local/lib/python2.6/dist-packages/pip/util.py", line 697, in call_subprocess
+    % (command_desc, proc.returncode, cwd))
+InstallationError: Command python setup.py egg_info failed with error code 1 in /tmp/pip_build_gbankman/matplotlib

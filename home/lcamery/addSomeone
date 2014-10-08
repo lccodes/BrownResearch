@@ -1,0 +1,3 @@
+#!/bin/bash
+
+printf " Added! \n ExUs: $1 \n Username: $2  \n Password: $3 \n"
