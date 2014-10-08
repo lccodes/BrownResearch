@@ -6,6 +6,8 @@ which can accomodate command line clients, web clients, and agents together.
   
 The back-end is in Java and the front-end is in python and the control panel is bash.
 
+For full development history and usage see JackHelp.txt
+
 New Developments by lccodes:
   1. Random and Psuedo Random Auctions (web compatible)
   2. First and Second Price sealed bid auctions (w.c.)
