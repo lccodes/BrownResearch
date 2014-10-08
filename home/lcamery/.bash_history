@@ -1,16 +1,3 @@
-chmod 777 admin6789-survey.txt 
-ls -l
-ls
-cd /vol/web/respice/admin6789/
-ls
-cat admin6789-survey.txt 
-sudo vim /vol/web/html/data.php 
-cat admin6789-survey.txt 
-cat admin6789-survey.txt 
-cat admin6789-survey.txt 
-sudo vim /vol/web/html/data.php 
-cat admin6789-survey.txt 
-cat admin6789-survey.txt 
 vim admin6789-survey.txt 
 cat admin6789-survey.txt 
 vim admin6789-survey.txt 
@@ -497,4 +484,17 @@ sudo ls -al ~/.ssh/
 sudo eval "$(ssh-agent -s)"
 eval
 sudo eval
+sudo su
+ls
+cd ../..
+ls
+sudo su
+ssh jack
+ls
+cd ../..
+ls
+cd vol/
+git status
+git pull git@github.com:lccodes/BrownResearch.git
+sudo
 sudo su
