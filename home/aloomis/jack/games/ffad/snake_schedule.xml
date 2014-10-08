@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jack>
+
+  <schedule>
+   <sequential>
+	<task auctionId="1"/>
+	<task auctionId="2"/>
+   </sequential>
+  </schedule>
+
+<auction id="1" type="Snake">
+        <order>1</order>
+        <name>Luke's Foe</name>
+        <team>NoSwag</team>
+        <position>Manager</position>
+        <estValue>36</estValue>
+    	<winner>1</winner>
+</auction>
+
+<auction id="2" type="Snake">
+        <order>2</order>
+        <name>Luke Camery</name>
+        <team>Swag</team>
+        <position>Manager</position>
+        <estValue>41</estValue>
+    	<winner>2</winner>
+</auction>
+
+</jack>

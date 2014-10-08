@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jack>
+
+  <schedule>
+   <sequential>
+	<task auctionId="29"/>
+	<task auctionId="8"/>
+	<task auctionId="17"/>
+	<task auctionId="30"/>
+	<task auctionId="10"/>
+   </sequential>
+  </schedule>
+
+<auction id="10" type="Recovery">
+        <order>52</order>
+        <name>Russell Wilson</name>
+        <team>SE</team>
+        <position>QB</position>
+        <estValue>36</estValue>
+    	<winner>1</winner>
+	<cost>0</cost>
+</auction>
+
+<auction id="29" type="Recovery">
+        <order>18</order>
+        <name>Andre Johnson</name>
+        <team>HOU</team>
+        <position>WR</position>
+        <estValue>41</estValue>
+    	<winner>1</winner>
+	<cost>15</cost>
+</auction>
+
+<auction id="8" type="Recovery">
+        <order>28</order>
+        <name>Matthew Stafford</name>
+        <team>DET</team>
+        <position>QB</position>
+        <estValue>38</estValue>
+    	<winner>1</winner>
+	<cost>0</cost>
+</auction>
+
+<auction id="30" type="Recovery">
+        <order>46</order>
+        <name>Jordy Nelson</name>
+        <team>G</team>
+        <position>WR</position>
+        <estValue>28</estValue>
+    	<winner>2</winner>
+	<cost>0</cost>
+</auction>
+
+<auction id="17" type="FantasyFootballAuction">
+        <order>41</order>
+        <name>LeSean McCoy</name>
+        <team>PHI</team>
+        <position>RB</position>
+        <estValue>18</estValue>
+</auction>
+
+</jack>

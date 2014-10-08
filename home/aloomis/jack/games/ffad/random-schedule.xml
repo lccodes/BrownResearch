@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jack>
+	
+    <schedule>
+      <sequential>
+         <task auctionId="1"/>
+         <task auctionId="2"/>
+	 <task auctionId="3"/>
+         <task auctionId="4"/>
+         <task auctionId="5"/>
+         <task auctionId="6"/>
+	 <task auctionId="7"/>
+	 <task auctionId="8"/>	 
+      </sequential>
+    </schedule>
+
+    <auction id="1" type="RandomAuction">
+	<order>1</order>
+	<name>Luke Camery</name>
+	<team>CS-Econ</team>
+	<position>QB</position>
+	<estValue>100</estValue>
+    </auction>
+ 
+    <auction id="2" type="RandomAuction">
+	<order>2</order>
+	<name>Amy Greenwald</name>
+	<team>GLAMOR</team>
+	<position>K</position>
+	<estValue>200</estValue>
+    </auction>
+ 
+    <auction id="3" type="RandomAuction">
+	<order>3</order>
+	<name>Luke Camery</name>
+	<team>CS-Econ</team>
+	<position>QB</position>
+	<estValue>100</estValue>
+    </auction>
+ 
+    <auction id="4" type="RandomAuction">
+	<order>4</order>
+	<name>Amy Greenwald</name>
+	<team>GLAMOR</team>
+	<position>K</position>
+	<estValue>200</estValue>
+    </auction>
+ 
+    <auction id="5" type="RandomAuction">
+	<order>5</order>
+	<name>Luke Camery</name>
+	<team>CS-Econ</team>
+	<position>QB</position>
+	<estValue>100</estValue>
+    </auction>
+ 
+    <auction id="6" type="RandomAuction">
+	<order>6</order>
+	<name>Amy Greenwald</name>
+	<team>GLAMOR</team>
+	<position>K</position>
+	<estValue>200</estValue>
+    </auction>
+
+    <auction id="7" type="RandomAuction">
+	<order>7</order>
+	<name>Name</name>
+	<team>GLAMOR</team>
+	<position>RB</position>
+	<estValue>200</estValue>
+    </auction>
+
+    <auction id="8" type="RandomAuction">
+	<order>8</order>
+	<name>Betsy</name>
+	<team>GLAMOR</team>
+	<position>QB</position>
+	<estValue>200</estValue>
+    </auction>
+
+</jack>

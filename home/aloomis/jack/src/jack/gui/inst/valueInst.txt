@@ -1,0 +1,2 @@
+Set the values for the different parameters of your chosen value function. 
+Reference the "Value Type" tab for detailed information on the parameters.

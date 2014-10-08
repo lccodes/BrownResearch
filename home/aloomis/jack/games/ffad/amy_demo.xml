@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jack>
+	
+    <schedule>
+      <sequential>
+         <task auctionId="3"/>
+         <task auctionId="1"/>
+         <task auctionId="2"/>
+         <task auctionId="4"/>
+	 <task auctionId="5"/>
+	 <task auctionId="6"/>
+	 <task auctionId="7"/>
+      </sequential>
+    </schedule>
+
+    <auction id="1" type="FantasyFootballAuction">
+	<order>2</order>
+	<name>Luke Camery</name>
+	<team>CS-Econ</team>
+	<position>QB</position>
+	<estValue>100</estValue>
+    </auction>
+ 
+    <auction id="2" type="FantasyFootballAuction">
+	<order>3</order>
+	<name>Amy Greenwald</name>
+	<team>GLAMOR</team>
+	<position>K</position>
+	<estValue>200</estValue>
+    </auction>
+ 
+    <auction id="3" type="FantasyFootballAuction">
+	<order>1</order>
+	<name>Gabe</name>
+	<team>League</team>
+	<position>TE</position>
+	<estValue>1</estValue>
+    </auction>
+
+    <auction id="4" type="FantasyFootballAuction">
+	<order>4</order>
+	<name>Betsy</name>
+	<team>GLAMOR</team>
+	<position>K</position>
+	<estValue>200</estValue>
+    </auction>
+ 
+    <auction id="5" type="FantasyFootballAuction">
+	<order>5</order>
+	<name>Eli</name>
+	<team>Haskell</team>
+	<position>TE</position>
+	<estValue>10</estValue>
+    </auction>
+
+    <auction id="6" type="FantasyFootballAuction">
+	<order>6</order>
+	<name>J</name>
+	<team>Brown Alumni</team>
+	<position>K</position>
+	<estValue>50</estValue>
+    </auction>
+ 
+    <auction id="7" type="FantasyFootballAuction">
+	<order>7</order>
+	<name>Brown</name>
+	<team>Bears</team>
+	<position>TE</position>
+	<estValue>10000</estValue>
+    </auction>
+
+</jack>

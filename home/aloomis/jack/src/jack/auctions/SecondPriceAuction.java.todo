@@ -1,0 +1,209 @@
+/**
+ * @author TJ Goff  goff.tom@gmail.com
+ * @version 1.0.0
+ *
+ * This library is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU Lesser General Public License version 2.1 as published by the
+ * Free Software Foundation
+ *
+ *
+ * This is a very basic example implementation of a
+ * second price, sealed bid auction.  There is a single
+ * good, and each agent submits a single bid after
+ * being told what the good is.  The agent with the
+ * highest bid receives the good and pays an amount
+ * equal to the second highest bid, or the reserve
+ * price, whichever is higher.
+ *
+ * Ties are broken randomly, and the winner of a tie
+ * pays an amount equal to the highest bid, the bid
+ * of the other tied player(s).
+ *
+ * If a non-zero reserve price is set, a winning bid
+ * must be greater than or equal to the reserve price,
+ * or else there is no winner and the auction simply ends.
+ */
+package jack.auctions;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Random;
+import java.util.Vector;
+
+import jack.server.*;
+
+
+public class SecondPriceAuction implements Auction{
+
+    Vector<ComThread> threads;//threads that communicate with clients
+    int[] bids;
+    Object good = new String("good");//a default good
+    int reservePrice = 0;//no reserve price unless specified
+    long responseTime = 10000;//wait time (in ms) for clients to respond (default= 10s)
+    boolean fullResponseTime = false;
+    String configFile = new String("Config_SecondPriceAuction.txt");//default config file
+    //Stores winner(s).  If there are multiple winners, break ties by random removal
+    Vector<ComThread> winners = new Vector<ComThread>();
+    Vector<String> purchases = new Vector<String>();//store records of purchass: "ID good cost"
+    //During auction resolution, assigned a formatted report of tuples:
+    //"clientID good(s) cost" (only agents who won something)
+    String finalReport = "";
+
+    /**
+     * Constructor
+     * @param threads Vector of ComThread objects that communicate with clients.
+     * @param configFile File defining configuration values for the auction.
+     */
+    public SecondPriceAuction(Vector<ComThread> threads, String configFile){
+        this.threads = threads;
+        this.bids = new int[threads.size()];
+        this.configFile = configFile;
+        AuctionServer.writeToLogFile("Constructed SecondPriceAuction("+
+                threads.size()+ " threads, Config_File: "+configFile+")", 10);
+    }
+
+    /**
+     * Alternate constructor
+     * @param threads Vector of ComThread objects that communicate with clients.
+     * @param configFile configFile File defining configuration values for the auction.
+     * @param good String representing the good being sold in the auction.
+     * @param reserve int representing the lowest valid bid.
+     */
+    public SecondPriceAuction(Vector<ComThread> threads, String configFile, Object good, int reserve){
+        this.threads = threads;
+        this.bids = new int[threads.size()];
+        this.configFile = configFile;
+        this.good = good;
+        this.reservePrice = reserve;
+        AuctionServer.writeToLogFile("Constructed SecondPriceAuction("+threads.size()+
+                " threads, Config_File: "+configFile+", Good: "+good+", Reserve_Price"
+                +reserve+")", 10);
+    }
+
+    /**
+     * Import a Vector of threads used to communicate with clients
+     * @param threads Vector of ComThread objects that communicate with clients.
+     */
+    public void setComThreads(Vector<ComThread> threads) {
+        this.threads = threads;
+        this.bids = new int[threads.size()];//adjust number of bids
+        AuctionServer.writeToLogFile("SecondPriceAuction.setThreads("+
+                threads.size()+ " threads)", 10);
+    }
+
+    /**
+     * Run the entire auction, and record the outcome
+     */
+    public Vector<String> runFullAuction(){
+        //Read in configuration file and setup the auction
+        setupAuction();
+        //Send information about auction to clients and prompt for bids...
+        runAuction();
+        //After setting up and running the auction, determine winner and report to clients
+        resolveAuction();
+        AuctionServer.writeToLogFile("SecondPriceAuction.runFullAuction() complete", 10);
+        return getFinalResult();
+    }
+
+    /**
+     * Read in configuration file and setup the auction
+     */
+    public void setupAuction() {
+        AuctionServer.writeToLogFile("SecondPriceAuction.setup() starting", 10);
+        try{
+            DataInputStream in = new DataInputStream(new FileInputStream("src/auctions/"+configFile));
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+            //Read config file into a hashmap of parameter:value pairs
+            HashMap<String, String> params = AuctionServer.getParamValuePairs(br.readLine());
+            if (params.containsKey("Good")) {
+                this.good = params.get("Good");
+            }
+            if (params.containsKey("Reserve")) {
+                this.reservePrice = Integer.parseInt(params.get("Reserve"));
+            }
+            if (params.containsKey("Response_Time")) {
+                this.responseTime = Long.parseLong(params.get("Response_Time"));
+            }
+            if (params.containsKey("Full_Response_Time")) {
+                fullResponseTime = Boolean.parseBoolean(params.get("fullResponseTime"));
+            }
+            in.close();//Close the input stream
+        } catch (Exception e) {//Catch exception if any
+              System.err.println("Error: " + e.getMessage());
+              AuctionServer.writeToLogFile("Caught Exception: "+e.getMessage(), 0);
+        }
+        AuctionServer.writeToLogFile("SecondPriceAuction.setup() complete", 10);
+    }
+
+    /**
+     * Send information about auction to clients and prompt for bids
+     */
+    public void runAuction(){
+        AuctionServer.writeToLogFile("SecondPriceAuction.runAuction() starting", 10);
+        AuctionServer.sendToAllWaitForResponses(threads, "Enter Bid. 2nd Price Auction for: "+
+                                this.good + ".  Reserve price = " +
+                                reservePrice, responseTime, fullResponseTime, "0");
+        //save bids in local array
+        for (int i=0; i < threads.size(); i++) {
+            bids[i] = Integer.parseInt(threads.get(i).getClientMsg());
+        }
+        AuctionServer.writeToLogFile("SecondPriceAuction.runAuction() complete", 10);
+    }
+
+    //After setting up and running the auction, determine winner and report to clients
+    public void resolveAuction() {
+        AuctionServer.writeToLogFile("SecondPriceAuction.resolveAuction() starting", 10);
+        //find 2 highest bids
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+        for (int i=0; i < threads.size(); i++) {
+            int currBid = bids[i];//Long.valueOf(threads.get(i).getClientMsg()).longValue();
+            if (currBid >= reservePrice && currBid > first) {
+                second = first;//former top bid becomes 2nd
+                first = currBid;
+            }
+            else if (currBid >= reservePrice && currBid > second) {
+                second = currBid;//update 2nd highest
+            }
+        }
+        System.out.println("1st bid = " + first + "\n2nd bid = " + second);
+        //determine winner(s)
+        Vector<ComThread> winners = new Vector<ComThread>();
+        for(int i=0; i < threads.size(); i++){
+            if( bids[i] == first && bids[i] >= reservePrice) {
+                winners.add(threads.get(i));
+            }
+        }
+        //break ties randomly
+        Random rand = new Random();
+        while (winners.size() > 1) {
+            winners.remove( rand.nextInt(winners.size()) );//remove random winner until only 1
+        }
+        if (winners.size() == 1){
+            purchases.add(winners.get(0).getClientID() + " " + good + " " + second);
+            AuctionServer.sendToAllWaitForResponses(threads,
+                    "Purchase Agent:"+winners.get(0).getClientID()+" Good:" + good +
+                    " Cost:"+second, 0, false, "0");
+            AuctionServer.writeToResultsFile("Purchase Agent:"+winners.get(0).getClientID()+
+                    " Good:" + good + " Cost:" + second);
+        }
+        AuctionServer.writeToLogFile("SecondPriceAuction.resolveAuction() complete", 10);
+    }
+
+    /**
+     * Call after the auction has run to get a list of Strings encoding all purchases
+     */
+    public Vector<String> getFinalResult(){
+        return purchases;
+    }
+
+    //Return a String encoding information about the auction: [type, good, reservePrice]
+    public String getDescription(){
+        return "SecondPriceAuction " + good + " " + reservePrice;
+    }
+
+}

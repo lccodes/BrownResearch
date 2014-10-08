@@ -1,0 +1,17 @@
+Contract valuation is inspired by markets where the goods will be resold.
+
+There are 4 parameters for each good x:
+
+Min/Max #: lower  and upper bounds on number of good x required
+
+Min/Max Value: minimum/maximum value a unit of 
+a good contributes to the contract's value
+
+
+You also must specify the number of contracts an agent can consider filling.
+
+Agent's value = value obtained from filling the optimal 
+contracts given the agent's allocation.
+(They must solve the knapsack problem. See the DFA agent for a brute force solution.)
+
+

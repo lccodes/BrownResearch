@@ -1,0 +1,12 @@
+Welcome to Jack! Here's a list of tools and tricks to know before you start out.
+
+1. Run "[sudo] scripts/run-jackweb-demo.sh" to see a demo on jack.cs.brown.edu/jackweb/ffad/1/ This demo is a series of regular FFAD auctions with a set 200 budget. aloomis/scripts contains all the run files and aloomis/jack/games/ffad contains all the actual xml schedules which detail the auction sequence that the scripts will run. 
+
+2. Jack is divided into two parts: the java side (actual JACK) and the web client (written in python through the django framework). aloomis/jack/ contains all the java files (aloomis/jack/src/jack is where the real magic is) and jackweb contains all the python (the core is in jackweb/ffad thus the url). The java communicates with the python through sentstart, sendstatus, and sendstop. Each one makes A LOT of decisions on their own, but the real brains are in the java. The server creates a scheduler which creates an auction factory which genereates each auction. Check the xml schema to see the requirements for an auction to be scheduled and check the factory if else statement to see what it knows how to create. 
+
+[[List of Demos]]
+	run-recovery.sh || Runs a preset file of recovery auctions but DOES NOT load from the recovery file. You need to run Recovery.java to generate a new schedule, 			but then run-recovery.sh will run it.
+
+	run-random.sh || Runs the random auction sequence which is a series of auctions that will give out the players to everyone with a 1/11 chance and no one with th		same. Random auctions ignore budgets.
+
+	run-snake.sh || Runs a snake draft. Also, ignores budgets.

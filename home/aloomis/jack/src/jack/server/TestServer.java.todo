@@ -1,0 +1,399 @@
+/*
+ * USED FOR TESTING!!!
+ */
+
+
+
+package jack.server;
+
+import java.net.*;
+import java.util.*;
+import java.io.*;
+
+import jack.auctions.*;
+
+
+public class TestServer {
+    public static void main(String[] args) throws IOException {
+        System.out.println("Auction Server starting");
+
+
+
+        //**************************************************************************************
+        //Store threads for communicating with each client
+        Vector<ComThread> myThreads = new Vector<ComThread>();
+        //**************************************************************************************
+
+
+
+        //Settings get default values, but can be set via Config_AuctionServer.txt
+        boolean useLocalIP = true;//default use local IP, else use public IP address
+        int portNum = 1300; //You may need to adjust this for your machine
+        int minNumClients = 2;//default, require 2+ clients
+        int maxNumClients = 100;//default, no more than 100 clients
+        int maxWaitForClients = 600000;//default, max wait for clients (milliseconds)
+        String auctionType = "FirstPriceAuction";
+        String auctionConfigFile = "Config_FirstPriceAuction.txt";
+        String configFileName = "Config_AuctionServer.txt";
+
+        //Open config file, read parameters and assign setting values
+        try{
+
+            DataInputStream in = new DataInputStream(new FileInputStream("src/server/"+configFileName));
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+            String strLine;//store line from file
+            System.out.println("\n\nImporting settings from " + configFileName);
+            while ((strLine = br.readLine()) != null){ //read line-by-line from config file
+                if( strLine.isEmpty() )
+                    continue;//skip blank lines
+
+                //split line from config file at colon, possibly followed by whitespace
+                String [] parts = strLine.split(":\\s*");
+                //parts[0] designates setting, parts[1] designates the value to use
+
+                //Host_IP can be set as "local" or "public" IP address
+                if(parts[0].equalsIgnoreCase("Host_IP"))
+                    useLocalIP = parts[1].equalsIgnoreCase("local");
+
+                //Port_Number specifies port number for Client connections
+                else if(parts[0].equalsIgnoreCase("Port_Number"))
+                    portNum = Integer.parseInt(parts[1]);
+
+                //Set minimum number of clients needed to start game/auction
+                else if(parts[0].equalsIgnoreCase("Min_Number_Clients"))
+                    minNumClients = Integer.parseInt(parts[1]);
+
+                //Set upper limit on number of clients allowed to join game/auction
+                else if(parts[0].equalsIgnoreCase("Max_Number_Clients"))
+                    maxNumClients = Integer.parseInt(parts[1]);
+
+                //Set time limit on how long to wait for client connections
+                else if(parts[0].equalsIgnoreCase("Max_Wait_For_Clients"))
+                    maxWaitForClients = Integer.parseInt(parts[1]);
+
+                //Set the type of game/auction to run
+                else if(parts[0].equalsIgnoreCase("Auction_Type"))
+                    auctionType = parts[1];
+
+                //Specify config file for the auction (highest level auction)
+                else if(parts[0].equalsIgnoreCase("Auction_Config_File"))
+                    auctionConfigFile = parts[1];
+
+                // Print the config settings on the console
+                for(int i=0; i < parts.length; i++)
+                    System.out.print( parts[i] + " ");
+                System.out.println();
+            }
+            in.close();//Close the input stream
+        }
+        catch (Exception e){//Catch exception if any
+              System.err.println("Error: " + e.getMessage());
+        }
+        System.out.println("\n");
+
+
+
+        //Find and report host name, and local (or public) IP address
+        try {
+            InetAddress addr = InetAddress.getLocalHost();//Get local IP
+            String hostname = addr.getHostName(); // Get the host name
+            String ip = addr.toString();//local IP
+            if( !useLocalIP )
+                ip = getPublicIP();
+            System.out.println("Host name = " + hostname + "\nIP address = " + ip);
+
+        }
+        catch (UnknownHostException e){
+            System.err.println("Error: " + e.getMessage());
+        }
+
+
+
+        //Create socket for server to listen for client connections
+        ServerSocket serverSocket = null;
+        try {
+            serverSocket = new ServerSocket(portNum);
+        }
+        catch (IOException e) {
+            System.err.println("AuctionServer could not listen on port: "+portNum+".");
+            System.exit(-1);
+        }
+        System.out.println("Clients should join the auction now...");
+
+
+
+
+        //Listen for new client connections until meet criteria to start game/auction
+        long startTime = Calendar.getInstance().getTimeInMillis();
+        while(myThreads.size() < maxNumClients &&
+             (myThreads.size() < minNumClients ) ){ //||
+              //Calendar.getInstance().getTimeInMillis()-startTime < maxWaitForClients)){
+
+
+            //When connection made, create new ComThread dedicated to current client connection
+            ComThread currThread = new ComThread( serverSocket.accept() );
+            //ComThread constructor calls start() on
+
+
+
+            myThreads.add( currThread );
+            //update display on server about status of client connections
+            if(myThreads.size() == minNumClients)
+                System.out.println("Minimum number of clients have joined: " + myThreads.size());
+            else if(myThreads.size() >= maxNumClients)
+                System.out.println("Maximum number of clients have joined: " + myThreads.size());
+            else if(System.nanoTime()-startTime >= maxWaitForClients)
+                System.out.println("Maximum wait time passed\n" +
+                                   "Wait for minimum number of clients. Clients: " + myThreads.size());
+            else
+                System.out.println("Client added: " + myThreads.size());
+        }
+
+
+
+
+
+        //Measure latency with clients
+        /*System.out.println("\n\n-------------\nTesting latency:");
+        for(int i=0; i < myThreads.size(); i++)
+            System.out.println("Latency = " + myThreads.get(i).findLatency() ) ;*/
+        clearAllMsgs(myThreads);//clear messages for next communication
+
+        //Prompt all clients for unique IDs before beginning the auction
+        promptIdForAllClients(myThreads, 15000);
+
+        //Starting conditions are satisfied to begin the auction.
+        System.out.println("\nReady to start with " + myThreads.size() + " agents!\n");
+
+
+
+        //Create the Auction
+        DutchFlowerAuction myAuction = new DutchFlowerAuction(myThreads);
+
+
+        myAuction.run();
+
+
+
+        /*
+        //used for time-constrained client sign-up
+        startTime = Calendar.getInstance().getTimeInMillis();
+        int inc = 0;
+
+        while( Calendar.getInstance().getTimeInMillis() - startTime < 60000){ //1 min
+
+            //print out any messages from clients...
+            for(int i=0; i < myThreads.size(); i++)
+                if( !myThreads.get(i).getClientMsg().isEmpty() ){
+                    String input = myThreads.get(i).getClientMsg();
+                    System.out.println("Agent [" + myThreads.get(i).getClientID() +
+                                       "] says: [" + input + "]");
+                    myThreads.get( (i+1)%myThreads.size() ).setServerMsg(input);//send to another agent?
+                    myThreads.get(i).setClientMsg("");
+                }
+
+
+            if( inc < (Calendar.getInstance().getTimeInMillis() - startTime)/1000 ){
+                System.out.println("Timer = " + (++inc) + "seconds" );
+                sendToAllClients( myThreads, "Timer = "+inc);
+            }
+
+        }
+
+        if(true){
+            System.out.println("Closing down.  Cherio");
+            System.exit(1);
+        }*/
+
+
+
+
+        //Print final outcome and send it to all clients
+        String finalResult = "rain";
+        //parse report into something more human-friendly
+        String[] parts = finalResult.split(" ");
+        String parsedResult = "";
+
+        System.out.println("\n\nTesting Final Result:\n"+finalResult + "\n");
+        if(parts.length % 3 == 0){ //tuples of [winnderID, good(s), cost]
+            for(int j=0; j < parts.length; j+=3){
+                parsedResult = parsedResult + " Agent: " + parts[j] +
+                                              ", goods:[" + parts[j+1] +
+                                              "], cost: " + parts[j+2] + ".";
+            }
+            while(parsedResult.charAt(0) == ' ')
+                parsedResult = parsedResult.substring(1);//remove leading " "
+            System.out.println("\n\nFinal Result:\n"+parsedResult + "\n");
+            sendToAllWaitForResponses(myThreads, parsedResult, 300, "0");
+        }
+
+        else{
+            System.err.println("\n\nFinal result is improperly formatted");
+            System.out.println("\n\nFinal Result:\n"+finalResult + "\n");
+            sendToAllWaitForResponses(myThreads, finalResult, 300, "0");
+        }
+
+
+
+
+        //***************************************************************************
+        //***************************************************************************
+
+
+        //Alert clients that they can close
+        sendToAllClients(myThreads, "END");
+        System.out.println("\n\nAuction is over.\nclosing connections...");
+        for(int i=myThreads.size()-1; i >= 0; i--){
+            myThreads.get(i).closeConnection();
+        }
+
+        //Close the server
+        serverSocket.close();
+        System.exit(0);
+    }//end main()
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //    FUNCTIONS
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    //Return TRUE if the string is a number
+    static public boolean isNumber(String s){
+        for (char c: s.toCharArray())
+            if(!Character.isDigit(c))
+                return false;
+        return true;
+    }
+
+
+    //Send a message to all clients at once
+    static public void sendToAllClients(Vector<ComThread> threads, String str){
+        for(int i=0; i < threads.size(); i++)
+            threads.get(i).setServerMsg(str);
+    }
+
+
+    //clears all messages stored on ComThreads
+    static public void clearAllMsgs(Vector<ComThread> threads){
+        int i;
+        for(i=0; i < threads.size(); i++)
+            threads.get(i).clearMsgs();
+        boolean allClear = false;
+        while( !allClear ){
+            allClear = true;
+            for(i=0; i < threads.size(); i++)
+                if( !threads.get(i).getClientMsg().isEmpty() ||
+                    !threads.get(i).getServerMsg().isEmpty() )
+                    allClear = false;
+        }
+    }
+
+
+
+    //Prompt all threads that do not have a clientID to get a String ID from client
+    //if a duplicate ID is returned, append client's IP address to the provided ID.
+    //If duplicates still exists, append counters until there is no duplication of IDs.
+    static public void promptIdForAllClients(Vector<ComThread> threads, long timeLimit){
+        //Send prompt for ID to each ComThread's SocketSender...
+        sendToAllClients(threads, "Enter_ID");
+
+        //Wait for each ComThread's SocketListener to respond (up to time limit)
+        waitForAllResponses(threads, timeLimit, "default_name");
+
+
+        //All clients have responded with an ID.  To ensure unique IDs, append a
+        //counter to the end of any duplicates (ex: dup, dup_2, dup_3, dup_4...)
+        //Use a hash-table to map ID strings to counts of duplicates
+        Hashtable<String, Integer> idCounts = new Hashtable<String, Integer>();
+        int i;
+        for(i=0; i < threads.size(); i++){
+            String currName = threads.get(i).getClientMsg();
+            if( idCounts.containsKey(currName)){
+                idCounts.put(currName, new Integer(idCounts.get(currName).intValue()+1) );
+                currName = currName +"_"+ idCounts.get(currName);
+            }
+            else
+                idCounts.put(currName, new Integer(1));
+
+            threads.get(i).setClientID(currName);
+        }
+    }
+
+
+
+    //Wait for all ComThreads to get a response from their respective
+    //Clients. If time-limit is exceeded, assign a default response for
+    //unresponsive Clients.
+    static public void waitForAllResponses(Vector<ComThread> threads, long timeLimit, String def){
+        int i;
+        long startTime = Calendar.getInstance().getTimeInMillis();
+
+        boolean allResp = false;
+        while( !allResp && Calendar.getInstance().getTimeInMillis()-startTime <= timeLimit ){
+            allResp = true;
+            for(i=0; i < threads.size(); i++)
+                if( threads.get(i).getClientMsg().isEmpty() )
+                    allResp = false;//this client hasn't responded yet
+        }
+
+        //if there were non-responsive clients, use the default response
+        if( !allResp ){
+            for(i=0; i < threads.size(); i++)
+                if( threads.get(i).getClientMsg().isEmpty() )
+                    threads.get(i).setClientMsg(def);
+        }
+    }
+
+
+
+    //Return a string representation of the server's public IP address
+    static public String getPublicIP(){
+        try{
+            URL whatismyip = new URL("http://automation.whatismyip.com/n09230945.asp");
+            BufferedReader in = new BufferedReader(new InputStreamReader(
+                            whatismyip.openStream()));
+            String ip = in.readLine(); //you get the IP as a String
+            System.out.println(ip);
+            return ip;
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+    //Clear all messages, send message to all clients, wait for response from all clients.
+    //a wrapper around other communications functions.  Clears all records of messages to/from
+    //clients, then sends a message to all clients.  Finally, wait for all clients to respond,
+    //or hit time-out limit and substitute default action on behalf of any agent who didn't
+    //respond in time.
+    static public void sendToAllWaitForResponses(Vector<ComThread> threads, String msg, int timeLimit, String def){
+        TestServer.clearAllMsgs(threads);
+        TestServer.sendToAllClients(threads, msg);
+        TestServer.waitForAllResponses(threads, timeLimit, def);
+    }
+
+
+    //Open an output file (create it if it doesn't exist), and
+    //append the specified string to the end.  This is good for
+    //logging activity.
+    static public void appendToFile(String outFileName, String data){
+        try {
+            FileWriter out = new FileWriter(outFileName, true);
+            out.write(data);
+            out.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+}//end class

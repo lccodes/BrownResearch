@@ -1,0 +1,7 @@
+Auctions in columns are run simultaneously. 
+These simultaneous auctions are run sequentially, left to right. 
+
+To set what type of auction to run at a given slot, click on the 
+slot and then click "add" next to the auction type. 
+
+Click a slot again to un-assign it. 

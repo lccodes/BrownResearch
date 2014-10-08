@@ -1,0 +1,22 @@
+Additive Valuation is loosely based on the Cobb-Douglas utility function.
+
+There are 2 parameters:
+alpha: a constant multiplier
+beta: an exponent
+
+G_x is the number of good x an agent is allocated.
+
+Agent's value = alpha_1*G_1^beta_1 + alpha_2*G_2^beta_2+... 
+
+Set a range for alpha and beta to define a prior over agent types.
+alpha and beta will be chosen uniformly randomly from the range.
+
+Hints:
+beta = 1 => Constant Marginal Utility 
+0< beta < 1 => Decreasing Marginal Utility 
+1 < beta => Increasing Marginal Utility
+
+alpha can be used to give different inherent values to different goods.
+As alpha increases the value of the good increases.
+
+

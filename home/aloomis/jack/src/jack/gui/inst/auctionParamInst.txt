@@ -1,0 +1,7 @@
+Some auctions require certain extra parameters.
+The table below corresponds to the auctions and goods in 
+the two previous tabs. Fill in the requested parameters. 
+
+Reserve: price below which the item should not be sold
+Min_Price_Increase: an agent's new bid must be this much higher than the current winning bid.
+Start_Price: A descending price auction will start at this price.

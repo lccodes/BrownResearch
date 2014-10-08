@@ -1,0 +1,89 @@
+/** Standalone java file to create a recovery auction schedule for Jack */
+
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.io.*;
+
+public class Recovery{
+	public static void main(String[] args){
+		if(args.length != 1){
+			System.out.println("Usage: [recovery_file.txt]");
+		}else{
+		    HashMap<String, LinkedList<String>> rosters = new HashMap<String, LinkedList<String>>();
+		    HashMap<String, String> budgets = new HashMap<String, String>();
+		    HashMap<String, String> oldParams = new HashMap<String, String>();
+		    //Read from the recovery file
+		    try{
+		    	//Read in from old schedule        [old-schedule.xml]
+				BufferedReader br = new BufferedReader(new FileReader("test1.xml"));
+				String newLine = "";
+				String info = "";
+				boolean wait = true;
+				while((info = br.readLine()) != null){
+					if(info.contains("<auction"))
+						wait = false;
+					if(!wait)
+						newLine += "\n"+info;
+				}
+
+		        br = new BufferedReader(new FileReader(args[0]));
+	    		String line = "";
+				while((line = br.readLine()) != null){
+				    String[] cuts = line.split(",");
+				    budgets.put(cuts[0],cuts[1]);
+				    LinkedList<String> ll = new LinkedList<String>();
+				    for(int i = 2; i < cuts.length; i++){
+					    ll.add(cuts[i]);
+
+					    //-----------------------
+				    	String[] oldCut = newLine.split("<auction id=\""+cuts[i]+"\" type=\"FantasyFootballAuction\">");
+				    	oldParams.put(cuts[i], oldCut[1].split("</auction>")[0]);
+				    	//-----------------------
+				    }
+
+				    rosters.put(cuts[0],ll);
+				}
+				br.close();
+		    }catch(IOException e){System.out.println("Houston we have a problem.");}
+
+		    //Actually make the new schedule
+		    String theFile = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + "\n"; 
+		    theFile +=  "<jack>"+"\n"+"\n"+"  <schedule>"+"\n"+"   <sequential>"+"\n";
+		    
+		    for(Map.Entry kv : rosters.entrySet()){
+		    	@SuppressWarnings("unchecked")
+				LinkedList<String> theLL = (LinkedList<String>) kv.getValue();
+		    	for(String id : theLL){
+		    		theFile += "\t"+"<task auctionId=\""+id+"\"/>" + "\n";
+		    	}
+		    }
+		    theFile += "   </sequential>" + "\n";
+		    theFile += "  </schedule>";
+		    theFile += "\n"+"\n";
+
+		    for(Map.Entry kv : rosters.entrySet()){
+				boolean first = true;
+				@SuppressWarnings("unchecked")
+				LinkedList<String> theLL = (LinkedList<String>) kv.getValue();
+		    	for(String id : theLL){
+				    theFile += "<auction id=\""+id+"\" type=\"Recovery\">"+"\n";
+				    theFile += oldParams.get(id);
+				    theFile += "\t" + "<winner>"+kv.getKey()+"</winner>"+"\n";
+				    theFile += first ?  "\t" + "<cost>"+budgets.get(kv.getKey())+"</cost>"+"\n" : "\t" + "<cost>0</cost>" + "\n";
+				    first = false;
+				    theFile += "</auction>" + "\n";
+				}
+		    }
+
+		    theFile += "</jack>" + "\n";
+		    try{
+			    BufferedWriter bw = new BufferedWriter(new FileWriter("recovery-schedule.xml"));
+			    bw.write(theFile);
+			    bw.flush();
+			    bw.close();
+			    System.out.println("Recovery schedule generated! See recovery-schedule.xml");
+			}catch(Exception e){System.out.println("We coudln't write!");}
+		}
+	}
+}

@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jack>
+
+    <schedule>
+        <sequential>
+            <task auctionId="56"/>
+            <task auctionId="33"/>
+            <task auctionId="32"/>
+            <task auctionId="51"/>
+            <task auctionId="11"/>
+            <task auctionId="27"/>
+            <task auctionId="19"/>
+            <task auctionId="25"/>
+            <task auctionId="46"/>
+            <task auctionId="18"/>
+            <task auctionId="20"/>
+            <task auctionId="15"/>
+            <task auctionId="16"/>
+            <task auctionId="3"/>
+            <task auctionId="45"/>
+            <task auctionId="34"/>
+            <task auctionId="13"/>
+            <task auctionId="29"/>
+            <task auctionId="59"/>
+            <task auctionId="41"/>
+            <task auctionId="31"/>
+            <task auctionId="53"/>
+            <task auctionId="43"/>
+            <task auctionId="35"/>
+            <task auctionId="22"/>
+            <task auctionId="2"/>
+            <task auctionId="1"/>
+            <task auctionId="8"/>
+            <task auctionId="47"/>
+            <task auctionId="23"/>
+            <task auctionId="24"/>
+            <task auctionId="39"/>
+            <task auctionId="49"/>
+            <task auctionId="38"/>
+            <task auctionId="36"/>
+            <task auctionId="55"/>
+            <task auctionId="28"/>
+            <task auctionId="60"/>
+            <task auctionId="40"/>
+            <task auctionId="37"/>
+            <task auctionId="17"/>
+            <task auctionId="42"/>
+            <task auctionId="54"/>
+            <task auctionId="4"/>
+            <task auctionId="14"/>
+            <task auctionId="30"/>
+            <task auctionId="26"/>
+            <task auctionId="58"/>
+            <task auctionId="50"/>
+            <task auctionId="57"/>
+            <task auctionId="44"/>
+            <task auctionId="10"/>
+            <task auctionId="12"/>
+            <task auctionId="48"/>
+            <task auctionId="5"/>
+            <task auctionId="7"/>
+            <task auctionId="52"/>
+            <task auctionId="21"/>
+            <task auctionId="6"/>
+            <task auctionId="9"/>
+        </sequential>
+    </schedule>
+
+    <auction id="1" type="FantasyFootballAuction">
+        <order>27</order>
+        <name>Aaron Rodgers</name>
+        <team>GB</team>
+        <position>QB</position>
+        <estValue>13</estValue>
+    </auction>
+
+    <auction id="2" type="FantasyFootballAuction">
+        <order>26</order>
+        <name>Drew Brees</name>
+        <team>NO</team>
+        <position>QB</position>
+        <estValue>18</estValue>
+    </auction>
+
+    <auction id="3" type="FantasyFootballAuction">
+        <order>14</order>
+        <name>Tom Brady</name>
+        <team>NE</team>
+        <position>QB</position>
+        <estValue>32</estValue>
+    </auction>
+
+    <auction id="4" type="FantasyFootballAuction">
+        <order>44</order>
+        <name>Cam Newton</name>
+        <team>CAR</team>
+        <position>QB</position>
+        <estValue>31</estValue>
+    </auction>
+
+    <auction id="5" type="FantasyFootballAuction">
+        <order>55</order>
+        <name>Colin Kaepernick</name>
+        <team>SF</team>
+        <position>QB</position>
+        <estValue>14</estValue>
+    </auction>
+
+    <auction id="6" type="FantasyFootballAuction">
+        <order>59</order>
+        <name>Peyton Manning</name>
+        <team>DEN</team>
+        <position>QB</position>
+        <estValue>32</estValue>
+    </auction>
+
+    <auction id="7" type="FantasyFootballAuction">
+        <order>56</order>
+        <name>Matt Ryan</name>
+        <team>ATL</team>
+        <position>QB</position>
+        <estValue>16</estValue>
+    </auction>
+
+    <auction id="8" type="FantasyFootballAuction">
+        <order>28</order>
+        <name>Matthew Stafford</name>
+        <team>DET</team>
+        <position>QB</position>
+        <estValue>38</estValue>
+    </auction>
+
+    <auction id="9" type="FantasyFootballAuction">
+        <order>60</order>
+        <name>Andrew Luck</name>
+        <team>IND</team>
+        <position>QB</position>
+        <estValue>22</estValue>
+    </auction>
+
+    <auction id="10" type="FantasyFootballAuction">
+        <order>52</order>
+        <name>Russell Wilson</name>
+        <team>SE</team>
+        <position>QB</position>
+        <estValue>36</estValue>
+    </auction>
+
+    <auction id="11" type="FantasyFootballAuction">
+        <order>5</order>
+        <name>Adrian Peterson</name>
+        <team>MIN</team>
+        <position>RB</position>
+        <estValue>30</estValue>
+    </auction>
+
+    <auction id="12" type="FantasyFootballAuction">
+        <order>53</order>
+        <name>Doug Martin</name>
+        <team>TB</team>
+        <position>RB</position>
+        <estValue>38</estValue>
+    </auction>
+
+    <auction id="13" type="FantasyFootballAuction">
+        <order>17</order>
+        <name>Arian Foster</name>
+        <team>HOU</team>
+        <position>RB</position>
+        <estValue>26</estValue>
+    </auction>
+
+    <auction id="14" type="FantasyFootballAuction">
+        <order>45</order>
+        <name>Trent Richardson</name>
+        <team>CLE</team>
+        <position>RB</position>
+        <estValue>33</estValue>
+    </auction>
+
+    <auction id="15" type="FantasyFootballAuction">
+        <order>12</order>
+        <name>C.J. Spiller</name>
+        <team>BUF</team>
+        <position>RB</position>
+        <estValue>12</estValue>
+    </auction>
+
+    <auction id="16" type="FantasyFootballAuction">
+        <order>13</order>
+        <name>Jamaal Charles</name>
+        <team>KC</team>
+        <position>RB</position>
+        <estValue>28</estValue>
+    </auction>
+
+    <auction id="17" type="FantasyFootballAuction">
+        <order>41</order>
+        <name>LeSean McCoy</name>
+        <team>PHI</team>
+        <position>RB</position>
+        <estValue>18</estValue>
+    </auction>
+
+    <auction id="18" type="FantasyFootballAuction">
+        <order>10</order>
+        <name>Ray Rice</name>
+        <team>BAL</team>
+        <position>RB</position>
+        <estValue>26</estValue>
+    </auction>
+
+    <auction id="19" type="FantasyFootballAuction">
+        <order>7</order>
+        <name>Marshawn Lynch</name>
+        <team>SEA</team>
+        <position>RB</position>
+        <estValue>34</estValue>
+    </auction>
+
+    <auction id="20" type="FantasyFootballAuction">
+        <order>11</order>
+        <name>Alfred Morris</name>
+        <team>WA</team>
+        <position>RB</position>
+        <estValue>20</estValue>
+    </auction>
+
+    <auction id="21" type="FantasyFootballAuction">
+        <order>58</order>
+        <name>Calvin Johnson</name>
+        <team>DET</team>
+        <position>WR</position>
+        <estValue>18</estValue>
+    </auction>
+
+    <auction id="22" type="FantasyFootballAuction">
+        <order>25</order>
+        <name>Julio Jones</name>
+        <team>ATL</team>
+        <position>WR</position>
+        <estValue>10</estValue>
+    </auction>
+
+    <auction id="23" type="FantasyFootballAuction">
+        <order>30</order>
+        <name>Dez Bryant</name>
+        <team>DAL</team>
+        <position>WR</position>
+        <estValue>18</estValue>
+    </auction>
+
+    <auction id="24" type="FantasyFootballAuction">
+        <order>31</order>
+        <name>A.J. Green</name>
+        <team>CIN</team>
+        <position>WR</position>
+        <estValue>28</estValue>
+    </auction>
+
+    <auction id="25" type="FantasyFootballAuction">
+        <order>8</order>
+        <name>Brandon Marshall</name>
+        <team>CHI</team>
+        <position>WR</position>
+        <estValue>34</estValue>
+    </auction>
+
+    <auction id="26" type="FantasyFootballAuction">
+        <order>47</order>
+        <name>Demaryius Thomas</name>
+        <team>DEN</team>
+        <position>WR</position>
+        <estValue>27</estValue>
+    </auction>
+
+    <auction id="27" type="FantasyFootballAuction">
+        <order>6</order>
+        <name>Vincent Jackson</name>
+        <team>TB</team>
+        <position>WR</position>
+        <estValue>24</estValue>
+    </auction>
+
+    <auction id="28" type="FantasyFootballAuction">
+        <order>37</order>
+        <name>Percy Harvin</name>
+        <team>SEA</team>
+        <position>WR</position>
+        <estValue>24</estValue>
+    </auction>
+
+    <auction id="29" type="FantasyFootballAuction">
+        <order>18</order>
+        <name>Andre Johnson</name>
+        <team>HOU</team>
+        <position>WR</position>
+        <estValue>41</estValue>
+    </auction>
+
+    <auction id="30" type="FantasyFootballAuction">
+        <order>46</order>
+        <name>Jordy Nelson</name>
+        <team>G</team>
+        <position>WR</position>
+        <estValue>28</estValue>
+    </auction>
+
+    <auction id="31" type="FantasyFootballAuction">
+        <order>21</order>
+        <name>Jimmy Graham</name>
+        <team>NO</team>
+        <position>TE</position>
+        <estValue>38</estValue>
+    </auction>
+
+    <auction id="32" type="FantasyFootballAuction">
+        <order>3</order>
+        <name>Rob Gronkowski</name>
+        <team>NE</team>
+        <position>TE</position>
+        <estValue>33</estValue>
+    </auction>
+
+    <auction id="33" type="FantasyFootballAuction">
+        <order>2</order>
+        <name>Aaron Hernandez</name>
+        <team>NE</team>
+        <position>TE</position>
+        <estValue>12</estValue>
+    </auction>
+
+    <auction id="34" type="FantasyFootballAuction">
+        <order>16</order>
+        <name>Jason Witten</name>
+        <team>DAL</team>
+        <position>TE</position>
+        <estValue>15</estValue>
+    </auction>
+
+    <auction id="35" type="FantasyFootballAuction">
+        <order>24</order>
+        <name>Tony Gonzalez</name>
+        <team>ATL</team>
+        <position>TE</position>
+        <estValue>28</estValue>
+    </auction>
+
+    <auction id="36" type="FantasyFootballAuction">
+        <order>35</order>
+        <name>Vernon Davis</name>
+        <team>SF</team>
+        <position>TE</position>
+        <estValue>31</estValue>
+    </auction>
+
+    <auction id="37" type="FantasyFootballAuction">
+        <order>40</order>
+        <name>Greg Olsen</name>
+        <team>CAR</team>
+        <position>TE</position>
+        <estValue>20</estValue>
+    </auction>
+
+    <auction id="38" type="FantasyFootballAuction">
+        <order>34</order>
+        <name>Kyle Rudolph</name>
+        <team>MIN</team>
+        <position>TE</position>
+        <estValue>19</estValue>
+    </auction>
+
+    <auction id="39" type="FantasyFootballAuction">
+        <order>32</order>
+        <name>Dennis Pitta</name>
+        <team>BAL</team>
+        <position>TE</position>
+        <estValue>30</estValue>
+    </auction>
+
+    <auction id="40" type="FantasyFootballAuction">
+        <order>39</order>
+        <name>Antonio Gates</name>
+        <team>S</team>
+        <position>TE</position>
+        <estValue>43</estValue>
+    </auction>
+
+    <auction id="41" type="FantasyFootballAuction">
+        <order>20</order>
+        <name>Seattle Seahawks</name>
+        <team>11</team>
+        <position>DEF</position>
+        <estValue>20</estValue>
+    </auction>
+
+    <auction id="42" type="FantasyFootballAuction">
+        <order>42</order>
+        <name>San Francisco 49ers</name>
+        <team>9</team>
+        <position>DEF</position>
+        <estValue>33</estValue>
+    </auction>
+
+    <auction id="43" type="FantasyFootballAuction">
+        <order>23</order>
+        <name>Houston Texans</name>
+        <team>8</team>
+        <position>DEF</position>
+        <estValue>20</estValue>
+    </auction>
+
+    <auction id="44" type="FantasyFootballAuction">
+        <order>51</order>
+        <name>Denver Broncos</name>
+        <team>7</team>
+        <position>DEF</position>
+        <estValue>16</estValue>
+    </auction>
+
+    <auction id="45" type="FantasyFootballAuction">
+        <order>15</order>
+        <name>Chicago Bears</name>
+        <team>6</team>
+        <position>DEF</position>
+        <estValue>36</estValue>
+    </auction>
+
+    <auction id="46" type="FantasyFootballAuction">
+        <order>9</order>
+        <name>Pittsburgh Steelers</name>
+        <team>4</team>
+        <position>DEF</position>
+        <estValue>18</estValue>
+    </auction>
+
+    <auction id="47" type="FantasyFootballAuction">
+        <order>29</order>
+        <name>New England Patriots</name>
+        <team>NE</team>
+        <position>DEF</position>
+        <estValue>22</estValue>
+    </auction>
+
+    <auction id="48" type="FantasyFootballAuction">
+        <order>54</order>
+        <name>New York Jets</name>
+        <team>9</team>
+        <position>DEF</position>
+        <estValue>27</estValue>
+    </auction>
+
+    <auction id="49" type="FantasyFootballAuction">
+        <order>33</order>
+        <name>Cincinnati Bengals</name>
+        <team>8</team>
+        <position>DEF</position>
+        <estValue>33</estValue>
+    </auction>
+
+    <auction id="50" type="FantasyFootballAuction">
+        <order>49</order>
+        <name>Green Bay Packers</name>
+        <team>1</team>
+        <position>DEF</position>
+        <estValue>17</estValue>
+    </auction>
+
+    <auction id="51" type="FantasyFootballAuction">
+        <order>4</order>
+        <name>Stephen Gostkowski</name>
+        <team>NE</team>
+        <position>K</position>
+        <estValue>44</estValue>
+    </auction>
+
+    <auction id="52" type="FantasyFootballAuction">
+        <order>57</order>
+        <name>Matt Bryant</name>
+        <team>ATL</team>
+        <position>K</position>
+        <estValue>18</estValue>
+    </auction>
+
+    <auction id="53" type="FantasyFootballAuction">
+        <order>22</order>
+        <name>Justin Tucker</name>
+        <team>BAL</team>
+        <position>K</position>
+        <estValue>18</estValue>
+    </auction>
+
+    <auction id="54" type="FantasyFootballAuction">
+        <order>43</order>
+        <name>Blair Walsh</name>
+        <team>MIN</team>
+        <position>K</position>
+        <estValue>38</estValue>
+    </auction>
+
+    <auction id="55" type="FantasyFootballAuction">
+        <order>36</order>
+        <name>Matt Prater</name>
+        <team>DEN</team>
+        <position>K</position>
+        <estValue>15</estValue>
+    </auction>
+    
+    <auction id="56" type="FantasyFootballAuction">
+        <order>1</order>
+        <name>Sebastian Janikowski</name>
+        <team>OAK</team>
+        <position>K</position>
+        <estValue>28</estValue>
+    </auction>
+
+    <auction id="57" type="FantasyFootballAuction">
+        <order>50</order>
+        <name>Dan Bailey</name>
+        <team>DAL</team>
+        <position>K</position>
+        <estValue>29</estValue>
+    </auction>
+
+    <auction id="58" type="FantasyFootballAuction">
+        <order>48</order>
+        <name>Shayne Graham</name>
+        <team>HOU</team>
+        <position>K</position>
+        <estValue>27</estValue>
+    </auction>
+
+    <auction id="59" type="FantasyFootballAuction">
+        <order>19</order>
+        <name>Alex Henery</name>
+        <team>PHI</team>
+        <position>K</position>
+        <estValue>7</estValue>
+    </auction>
+
+    <auction id="60" type="FantasyFootballAuction">
+        <order>38</order>
+        <name>Connor Barth</name>
+        <team>TB</team>
+        <position>K</position>
+        <estValue>13</estValue>
+    </auction>
+
+</jack>

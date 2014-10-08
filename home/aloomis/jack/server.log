@@ -1,0 +1,4 @@
+Jul 15, 2014 1:34:08 AM jack.server.AuctionServer waitForClients
+INFO: Listening for connections at 0.0.0.0/0.0.0.0:1300
+Jul 15, 2014 1:34:09 AM jack.server.AuctionServer waitForClients
+INFO: Received connection from /127.0.0.1
