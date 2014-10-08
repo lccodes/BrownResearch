@@ -1,0 +1,7 @@
+header {
+	background-image:
+		url(../../images/noise.png),
+		url(../../images/header_texture2.png);
+	background-image: url(../../images/header_texture2.png);
+	background-position: left 30px, left 900px;
+}

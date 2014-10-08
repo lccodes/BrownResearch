@@ -1,0 +1,54 @@
+<html>
+<body>
+<form id="sign-in-form" action="http://jack.cs.brown.edu/test" method="post">
+                  
+                  
+                    <label for="registration-username">Email Address / Username:</label>
+                                    <input type="text"
+                                           tabindex="1"
+                                           id="registration-username"
+                                           class="text required validate "
+                                           name="username"
+                                           value=""
+                                           maxlength="50"
+                       data-validationpattern="^[a-zA-Z0-9]{4,20}$" 
+                                           data-validationpatternmsg="Enter at least 4 letters or numbers."                     
+                       data-validationusername="^[a-zA-Z0-9]{4,20}$" 
+                       data-validationusernamemsg="Enter at least 4 letters or numbers." 
+                       data-validationemail="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" 
+                       data-validationemailmsg="A valid email is required." 
+                                           data-fieldname="an email or username"/>
+                  
+                  
+                            <label for="registration-password">Password:</label>
+                                    <input type="password"
+                                           id="registration-password"
+                                           tabindex="2"
+                                           class="text  required validate "
+                                           minlength="4"
+                                           maxlength="20"
+                                           name="password"
+                                           value=""
+                                           data-fieldname="a password"/>
+                  
+                  <div class="submit">
+                    <div class="forgot">
+                      <a class="forgot" href="/fans/forgot-password" tabindex="4">Forgot your password?</a>
+                    </div>
+                    <div class="cookie-persisted">
+                      <input type="checkbox" name="cookiePersisted" checked="checked" tabindex="3">
+                      <label for="cookiePersisted" class="cookie-persisted">
+                        Remember me
+                      </label>
+                    </div>
+                    <div class="clear"></div>
+                    <p>
+                      <button class="button button-royal-blue" type="submit" tabindex="5"><span>Sign In</span></button>
+                    </p>
+                    <input id="successUrl" name="successUrl" type="hidden" value=""/>
+                  </div>
+                  <input type="hidden" name="s" value=""/>
+                  <input type="hidden" name="modal" value="0"/>
+                </form>
+</body>
+</html>

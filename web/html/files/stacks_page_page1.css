@@ -1,0 +1,52 @@
+#stacks_in_18_page1_button {
+	display:block;
+	position: relative;
+	text-align: center;
+}
+
+
+#stacks_in_18_page1 a:link, #stacks_in_18_page1 a:visited {
+	 display:inline-block; 
+	
+	
+	position: relative;
+	text-decoration:none;
+}
+#stacks_in_18_page1 a:hover, #stacks_in_18_page1 a:active {
+	color:#FFFFFF;
+}
+
+
+
+
+
+
+
+#stacks_in_18_page1 a:link, #stacks_in_18_page1 a:visited {
+	background-color:#0050A0;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0050A0), to(#003060));
+	border:1px solid #003060;
+	padding:3px 20px;
+	border-radius:30px;
+	color:#FFFFFF;
+	box-shadow:rgba(0, 0, 0, 0.5) 0px 1px 2px;
+	margin:5px;
+	font-weight:bold;
+}
+#stacks_in_18_page1 a:hover {
+	background-color:#0056AC;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0056AC), to(#002953));
+	box-shadow:rgba(0, 0, 0, 0.25) 0px 2px 4px;
+}
+#stacks_in_18_page1 a:active {
+	background-color:#0050A0;
+	box-shadow:rgba(0, 0, 0, 0.75) 0px 0px 4px inset;
+}
+
+
+
+
+#stacks_in_18_page1 {
+	margin:  14px;
+	padding:  10px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Elizabeth Hilliard" />
+		<title>JACK</title>
+		<link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen" />
+		<style type="text/css">
+		h1 {color:brown;font-size:350%;font-family:andalus;}
+		h2 {color:brown;font-size:150%;font-family:andalus; margin-left: 30px; margin-right: 30px}
+		h3 {color:rgb(0,102,204);font-size:115%%;font-family:andalus; margin-left: 30px; margin-right: 30px}
+		p2 {color:rgb(0,51,154);font-size:100%%;font-family:andalus; margin-left: 30px; margin-right: 30px}
+		p {color:rgb(0,51,154);font-size:100%%;font-family:andalus;text-indent:30px; margin-left: 30px; margin-right: 30px}
+		li {color:rgb(0,51,154);font-size:100%%;font-family:andalus;text-indent:30px}
+		a {color:rgb(0,102,204)}
+		.tablink {color:rgb(178,34,34)}
+		table {margin-left: auto; margin-right: auto}
+		</style>
+	</head>
+	<body style="background-color:rgb(180,180,180)">
+	
+
+	<h1 style="text-align:center;"> JACK:</h1>
+	<h2 style= "text-align:center;">Java Auction Configuration Kit</h2>
+	
+	
+		<table width = "80%">
+		<tr valign="top">
+		<td style="background-color: rgb(240,240,240);text-align:top;border">
+		
+		<h2>What is JACK?</h2>
+			<p>JACK is an in-the-box configurable auction simulator designed </p>
+			
+			<hr>
+			<h2> JACK lets you:</h2>
+	
+				<ul style="list-style-type: square;">
+					<li> configure simple (1st, 2nd, ascending, descending) auction games</li>
+					<li> combine these simple auctions into more complex schedules (sequential and/or simultaneous) of auctions </li>
+					<li> pick between 5 different value functions</li>
+					<li> control the prior over which these valuation functions are drawn</li> 
+					
+				</ul>
+		</td>
+		
+		</tr>
+		
+		<table width = "80%">
+		<td style="background-color: rgb(240,240,240);text-align:top;">
+			 
+		
+				<h2> Downloading JACK</h2>
+				<p>	<A HREF="http://jack.cs.brown.edu/JACK.zip">Download JACK</A>		</p>
+				<p>				</p>
+				
+				<hr>
+				
+				<h2>Using JACK</h2>
+				
+				<p> Here is a <A HREF="http://jack.cs.brown.edu/README.pdf">README</A>. Video tutorials to come soon.</p>
+				<hr>
+	
+		<table width = "100%">
+		<tr valign="top">
+		<td width="75%"; style="background-color:rgb(240,240,240);text-align:top">
+				
+				<h2> Feedback and Contributing to JACK</h2>
+				<p>We invite contributions in the form of agents designed for specific auctions, additional auctions, new valuation functions and other functionality. If you have other feedback please send an email to JACK at cs[dot]brown[dot] edu  </p>
+				
+				<p>
+    			</p>
+				</td>
+				
+				
+		</tr>
+		</table>
+
+
+	</body>
+	
+</html>

@@ -1,0 +1,23 @@
+.blog-entry-date,
+.blog-entry-comments a,
+.blog-entry-comments a:visited,
+.blog-category-link-enabled,
+.blog-category-link-disabled,
+.blog-archive-link-enabled,
+.blog-archive-link-disabled {
+	background-image: url('../../images/icons_small_dark.png');
+}
+
+.filesharing-item-title a:before,
+.filesharing-item-title a:visited:before,
+.filesharing-item-title a[href*=".pdf"]:before,
+.filesharing-item-title a[href*=".doc"]:before,
+.filesharing-item-title a[href*=".zip"]:before,
+.filesharing-item-title a[href*=".png"]:before,
+.filesharing-item-title a[href*=".jpg"]:before,
+.filesharing-item-title a[href*=".gif"]:before,
+.filesharing-item-title a[href*=".PNG"]:before,
+.filesharing-item-title a[href*=".JPG"]:before,
+.filesharing-item-title a[href*=".GIF"]:before {
+	background-image: url('../../images/icons_large_dark.png');
+}

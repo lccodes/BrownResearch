@@ -1,0 +1,98 @@
+body, #fancybox-title-float-main {
+	color: #7F7A6A;
+}
+
+h1, h2, h3, h4, h5, h6, div.album-title, .photo-caption,
+#plugin_sidebar a, .photo-title, .blog-entry-date, blockquote,
+.blog-entry-title a {
+	color: #38352D;
+}
+
+h2 {
+	color: #38352D;
+}
+
+#plugin_sidebar h3, #main h3, h4, h5, h6 {
+	color: #B3B3B3;
+}
+
+a:link, a:visited {
+	color: #0080CF;
+}
+
+header h2 em {
+	color: #004C9B;
+}
+
+header,
+nav ul li a.current:before,
+nav ul li > a.currentAncestor:before {
+	background-color: #004080;
+}
+
+header h1 {
+	color: #FFFFFF;
+}
+
+nav ul li a:link,
+nav ul li a:visited,
+header h2 {
+	color: #FFFFFF;
+}
+
+nav ul li a.current,
+nav ul li a.current:hover,
+nav ul li a.currentAncestor,
+nav ul ul li a:link,
+nav ul ul li a:visited {
+	background-color: #FFFFFF;
+	color: #0080CF;
+}
+
+nav ul li a:hover,
+nav ul li.hasChildren a:hover:after {
+	color:#0080CF;
+	border-top-color: #0080CF;
+}
+
+nav ul li.hasChildren a.current:after,
+nav ul li.hasChildren a.currentAncestor:after {
+	border-top-color: #0080CF;
+}
+
+nav ul li.hasChildren > a:after {
+	border-top-color: #FFFFFF;
+}
+
+nav ul ul li.hasChildren a:after,
+nav ul ul li.hasChildren a:hover:after,
+nav ul ul li.hasChildren a.current:after,
+nav ul ul li.hasChildren a.currentAncestor:after {
+	border-color: transparent;;
+	border-left-color: #0080CF;
+}
+
+nav ul ul li a:hover,
+nav ul ul li a.current {
+	color: #0080CF;
+}
+
+#sidebarContainer {
+	background-color: #E6E6E6;
+	color: #48443A;
+}
+
+body, #main, #fancybox-close, #fancybox-left-ico, #fancybox-right-ico, #fancybox-title-float-main {
+	background-color: #FFFFFF;
+}
+
+blockquote, ul.blog-tag-cloud, .blog-archive-headings-wrapper,
+.filesharing-description, .album-description, .photo-navigation,
+#plugin_sidebar div, hr, .sitemap-header {
+	border-color: #BBBBBB;
+}
+
+footer, #topbar {
+	background-color: #24221D;
+}
+

@@ -1,0 +1,7 @@
+.wrapper {
+	width: 960px;
+}
+
+#content.hasPluginSidebarContent {
+	width: 700px;
+}
