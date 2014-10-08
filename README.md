@@ -4,9 +4,15 @@ A multiyear project, the Java Auction Configuration Kit has grown into a versati
 which can accomodate command line clients, web clients, and agents together. 
   See the web GUI at jack.cs.brown.edu/jackweb/ffad/1
   
-The back-end is in Java and the front-end is in python and the control panel is bash.
+The back-end is in Java and the front-end is in python and the control panel is bash. 
+	home/aloomis is the location of Jack
+	home/aloomis/jack is the auction simulator
+	home/aloomis/jackweb is the front-end for the simulator
+	web/html contains front-end scripts for the BrownFF Chrome extension
+	web/respice contains the data recieved from BrownFF
+	
 
-For full development history and usage see JackHelp.txt
+For full development history and usage see JackHelpFile.txt
 
 New Developments by lccodes:
   1. Random and Psuedo Random Auctions (web compatible)
