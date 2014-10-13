@@ -1,5 +1,3 @@
-cd jack
-ls
 sudo chmod +x Makefile
 ./Makefile 
 scp Makefile /home/betsy
@@ -498,3 +496,5 @@ vi pullIDs.py
 ./pullIDs.py /home/lcamery/theTrueFile.txt 6 5 8 6e039c049
 vi pullIDs.py 
 ./pullIDs.py /home/lcamery/theTrueFile.txt 6 5 8 6e039c049
+quit
+logout

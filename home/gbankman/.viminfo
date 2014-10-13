@@ -8,16 +8,18 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/print
+~MSle0~/print week
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:q
 :w
-:q!
+:q
+:W
 :w!
+:w ssScriptNoOutliers.py
+:q!
 :!q
 :.!
 :!w
@@ -25,7 +27,28 @@ $
 :wq
 
 # Search String History (newest to oldest):
+?/print week
 ?/print
+?/weekNums
+?/weekNms
+?/week
+?/weekNums[l
+?/EVER 116
+?/wee
+?/tempWeekN
+?/tempWeek
+?/tempWeekNums
+?/surprise
+?/suspense
+?/tempWeekNums[week
+?/ense
+?/  ense
+?/  pense
+?/spense
+?/sepData
+?/weeks
+?/sOne
+?/parseF
 ?/parseFile
 ?/if(len(hS
 
@@ -37,245 +60,349 @@ $
 
 # Registers:
 "0	LINE	0
-	
+						
 ""1	LINE	0
-							if("2e" in fileName):
+			print "PLEASE PLEASE PLEASE"
 "2	LINE	0
-					print fileName
+		print weekNums[index]
 "3	LINE	0
-					print curSur
+							print "EVER 116 EVER 116 EVER 116"
 "4	LINE	0
-							print cur
+						
 "5	LINE	0
-					print file
+			print "EVER EVER EVER"
 "6	LINE	0
-					print "0"
+						suspense += tempSuspense
 "7	LINE	0
-				else:
+									print len(tempWeekNums)
 "8	LINE	0
-						print "ever here?"
+									print week
 "9	LINE	0
-						for elNum in range(curLen):
+					print len(spenseWeeks)
 "-	CHAR	0
 	r
 
 # File marks:
-'0  56  2  ~/ssScript.py
-'1  32  5  ~/ssScript.py
-'2  42  21  ~/ssScript.py
-'3  3  0  ~/ssScript.py
-'4  40  15  ~/ssScript.py
-'5  22  17  ~/ssScript.py
-'6  31  15  ~/ssScript.py
-'7  29  14  ~/ssScript.py
-'8  96  73  ~/ssScript.py
-'9  94  21  ~/ssScript.py
+'0  1  0  ~/ssScriptNoOutliers.py
+'1  113  24  ~/ssScriptNoOutliers.py
+'2  177  15  ~/ssScriptNoOutliers.py
+'3  175  20  ~/ssScriptNoOutliers.py
+'4  174  17  ~/ssScriptNoOutliers.py
+'5  151  14  ~/ssScriptNoOutliers.py
+'6  119  18  ~/ssScriptNoOutliers.py
+'7  118  5  ~/ssScriptNoOutliers.py
+'8  120  4  ~/ssScriptNoOutliers.py
+'9  189  16  ~/ssScriptNoOutliers.py
 
 # Jumplist (newest first):
--'  56  2  ~/ssScript.py
+-'  1  0  ~/ssScriptNoOutliers.py
+-'  113  24  ~/ssScriptNoOutliers.py
+-'  177  15  ~/ssScriptNoOutliers.py
+-'  175  20  ~/ssScriptNoOutliers.py
+-'  174  17  ~/ssScriptNoOutliers.py
+-'  151  14  ~/ssScriptNoOutliers.py
+-'  120  4  ~/ssScriptNoOutliers.py
+-'  2  0  ~/ssScriptNoOutliers.py
+-'  119  5  ~/ssScriptNoOutliers.py
+-'  29  2  ~/ssScriptNoOutliers.py
+-'  189  6  ~/ssScriptNoOutliers.py
+-'  180  0  ~/ssScriptNoOutliers.py
+-'  170  0  ~/ssScriptNoOutliers.py
+-'  168  1  ~/ssScriptNoOutliers.py
+-'  150  0  ~/ssScriptNoOutliers.py
+-'  118  5  ~/ssScriptNoOutliers.py
+-'  71  6  ~/ssScriptNoOutliers.py
+-'  56  4  ~/ssScriptNoOutliers.py
+-'  43  2  ~/ssScriptNoOutliers.py
+-'  39  2  ~/ssScriptNoOutliers.py
+-'  121  5  ~/ssScriptNoOutliers.py
+-'  16  0  ~/ssScriptNoOutliers.py
+-'  116  6  ~/ssScriptNoOutliers.py
+-'  123  27  ~/ssScriptNoOutliers.py
+-'  33  3  ~/ssScriptNoOutliers.py
+-'  28  2  ~/ssScriptNoOutliers.py
+-'  100  0  ~/ssScriptNoOutliers.py
+-'  188  0  ~/ssScriptNoOutliers.py
+-'  96  8  ~/ssScriptNoOutliers.py
+-'  42  24  ~/ssScriptNoOutliers.py
+-'  149  4  ~/ssScriptNoOutliers.py
+-'  183  0  ~/ssScriptNoOutliers.py
+-'  140  0  ~/ssScriptNoOutliers.py
+-'  112  5  ~/ssScriptNoOutliers.py
+-'  97  7  ~/ssScriptNoOutliers.py
+-'  73  6  ~/ssScriptNoOutliers.py
+-'  66  7  ~/ssScriptNoOutliers.py
+-'  49  4  ~/ssScriptNoOutliers.py
+-'  44  2  ~/ssScriptNoOutliers.py
+-'  27  1  ~/ssScriptNoOutliers.py
+-'  24  1  ~/ssScriptNoOutliers.py
+-'  14  1  ~/ssScriptNoOutliers.py
+-'  13  1  ~/ssScriptNoOutliers.py
+-'  17  11  ~/ssScriptNoOutliers.py
+-'  9  14  ~/ssScriptNoOutliers.py
+-'  37  0  ~/ssScriptNoOutliers.py
+-'  141  0  ~/ssScriptNoOutliers.py
+-'  41  25  ~/ssScriptNoOutliers.py
+-'  114  0  ~/ssScriptNoOutliers.py
+-'  103  17  ~/ssScriptNoOutliers.py
+-'  92  4  ~/ssScriptNoOutliers.py
+-'  101  7  ~/ssScriptNoOutliers.py
+-'  48  15  ~/ssScriptNoOutliers.py
+-'  45  28  ~/ssScriptNoOutliers.py
+-'  46  9  ~/ssScriptNoOutliers.py
+-'  26  66  ~/ssScriptNoOutliers.py
+-'  89  3  ~/ssScriptNoOutliers.py
+-'  95  5  ~/ssScriptNoOutliers.py
+-'  3  0  ~/ssScriptNoOutliers.py
+-'  51  19  ~/ssScriptNoOutliers.py
+-'  126  0  ~/ssScriptNoOutliers.py
+-'  76  2  ~/ssScriptNoOutliers.py
+-'  86  0  ~/ssScriptNoOutliers.py
+-'  79  2  ~/ssScriptNoOutliers.py
+-'  30  0  ~/ssScriptNoOutliers.py
+-'  61  50  ~/ssScriptNoOutliers.py
+-'  63  7  ~/ssScriptNoOutliers.py
+-'  65  5  ~/ssScriptNoOutliers.py
+-'  78  11  ~/ssScriptNoOutliers.py
+-'  31  32  ~/ssScript.py
 -'  1  0  ~/ssScript.py
--'  32  5  ~/ssScript.py
--'  42  21  ~/ssScript.py
--'  3  0  ~/ssScript.py
--'  40  15  ~/ssScript.py
--'  22  17  ~/ssScript.py
--'  31  15  ~/ssScript.py
--'  29  14  ~/ssScript.py
--'  96  73  ~/ssScript.py
--'  4  60  ~/ssScript.py
--'  94  21  ~/ssScript.py
--'  46  8  ~/ssScript.py
--'  92  22  ~/ssScript.py
--'  89  4  ~/ssScript.py
--'  72  21  ~/ssScript.py
--'  73  3  ~/ssScript.py
--'  71  25  ~/ssScript.py
--'  62  42  ~/ssScript.py
--'  55  6  ~/ssScript.py
--'  15  9  ~/ssScript.py
--'  111  18  ~/ssScript.py
--'  59  6  ~/ssScript.py
--'  57  6  ~/ssScript.py
--'  53  4  ~/ssScript.py
--'  39  6  ~/ssScript.py
+-'  97  0  ~/ssScript.py
+-'  58  3  ~/ssScript.py
+-'  38  4  ~/ssScript.py
+-'  99  0  ~/ssScript.py
+-'  84  4  ~/ssScript.py
+-'  68  0  ~/ssScript.py
+-'  56  4  ~/ssScript.py
+-'  37  4  ~/ssScript.py
+-'  30  6  ~/ssScript.py
+-'  22  4  ~/ssScript.py
+-'  12  0  ~/ssScript.py
+-'  18  3  ~/ssScript.py
+-'  64  3  ~/ssScript.py
+-'  62  3  ~/ssScript.py
 -'  24  4  ~/ssScript.py
--'  61  14  ~/ssScript.py
--'  74  5  ~/ssScript.py
--'  44  26  ~/ssScript.py
--'  52  27  ~/ssScript.py
--'  54  21  ~/ssScript.py
--'  21  2  ~/ssScript.py
--'  70  0  ~/ssScript.py
--'  48  16  ~/ssScript.py
--'  75  14  ~/ssScript.py
--'  36  10  ~/ssScript.py
--'  37  11  ~/ssScript.py
--'  19  2  ~/ssScript.py
--'  45  3  ~/ssScript.py
--'  69  11  ~/ssScript.py
--'  1  31  /vol/home/testRemoval.txt
--'  45  2  ~/actionsScript.py
--'  1  0  ~/actionsScript.py
--'  50  0  ~/actionsScript.py
--'  42  8  ~/actionsScript.py
--'  37  14  ~/actionsScript.py
--'  12  7  ~/actionsScript.py
--'  44  18  ~/actionsScript.py
--'  58  14  ~/actionsScript.py
--'  49  29  ~/actionsScript.py
--'  1  0  /usr/bin/python2.6
--'  1  0  /usr/bin/python
--'  29  16  ~/actionsScript.py
--'  26  0  ~/actionsScript.py
--'  41  24  ~/actionsScript.py
--'  16  14  ~/actionsScript.py
--'  35  16  /vol/web/respice/actionsScript.py
--'  1  0  /vol/web/respice/actionsScript.py
--'  11  28  /vol/web/respice/actionsScript.py
--'  12  6  /vol/web/respice/actionsScript.py
--'  20  28  /vol/web/respice/actionsScript.py
--'  25  4  /vol/web/respice/actionsScript.py
--'  18  34  /vol/web/respice/actionsScript.py
--'  22  17  /vol/web/respice/actionsScript.py
--'  19  45  /vol/web/respice/actionsScript.py
--'  23  7  /vol/web/respice/hScript.py
--'  1  0  /vol/web/respice/hScript.py
--'  5  32  /vol/web/respice/hScript.py
--'  15  30  /vol/web/respice/hScript.py
--'  14  37  /vol/web/respice/hScript.py
--'  18  2  /vol/web/respice/hScript.py
--'  13  0  /vol/web/respice/hScript.py
--'  17  17  /vol/web/respice/hScript.py
--'  22  30  /vol/web/respice/hScript.py
--'  7  28  /vol/web/respice/hScript.py
--'  10  30  /vol/web/respice/hScript.py
--'  9  31  /vol/web/respice/hScript.py
--'  1  0  /vol/web/respice/admin6789/hScript.py
--'  20  17  /vol/web/respice/hScript.py
--'  1  0  /vol/web/html/theTrueFile.txt
--'  1  0  /vol/web/respice/66684cd34/66684cd34-survey.txt
--'  1  0  /vol/web/html/eightMen.txt
--'  1  0  /vol/web/respice/f84bc5730/f84bc5730-survey.txt
--'  1  0  /vol/web/respice/8c160a3e0/8c160a3e0-survey.txt
--'  1  0  /vol/web/respice/28b8f3b28/28b8f3b28-survey.txt
--'  1  0  /vol/web/respice/8c160a3e0/8c160a3e0-s
--'  8  0  /vol/web/respice/8c160a3e0
--'  1  21  /vol/home/aloomis/jack/src/jack/auctions/FFA3.java
--'  1  0  /vol/home/aloomis/jack/src/jack/auctions/FFA3.jaa
--'  1  0  /vol/home/aloomis/jack/src/jack/auctions/AscendingPriceAuction.java.todo
--'  784  0  /vol/home/aloomis/jackweb/ffad/media/ffad/everything.js
--'  1  0  /vol/home/aloomis/jackweb/ffad/media/ffad/everything.js
--'  370  0  /vol/home/aloomis/jack/src/jack/auctions/AuctionBase.java
--'  1  0  /vol/home/aloomis/jack/src/jack/auctions/AuctionBase.java
--'  261  25  /vol/home/aloomis/jack/src/jack/scheduler/Scheduler.java
--'  1  0  /vol/home/aloomis/jack/src/jack/scheduler/Scheduler.java
+-'  14  0  ~/ssScript.py
+-'  64  7  ~/ssScriptNoOutliers.py
+-'  88  29  ~/ssScriptNoOutliers.py
+-'  105  2  ~/ssScriptNoOutliers.py
+-'  94  28  ~/ssScriptNoOutliers.py
+-'  58  4  ~/ssScriptNoOutliers.py
+-'  191  0  ~/ssScriptNoOutliers.py
+-'  153  4  ~/ssScriptNoOutliers.py
+-'  176  27  ~/ssScriptNoOutliers.py
+-'  173  20  ~/ssScriptNoOutliers.py
 
 # History of marks within files (newest to oldest):
 
+> ~/ssScriptNoOutliers.py
+	"	1	0
+	^	113	25
+	.	113	24
+	+	91	5
+	+	103	18
+	+	109	3
+	+	43	1
+	+	37	20
+	+	41	25
+	+	110	39
+	+	114	37
+	+	116	36
+	+	112	26
+	+	27	0
+	+	27	22
+	+	140	21
+	+	149	25
+	+	149	17
+	+	149	87
+	+	39	1
+	+	38	18
+	+	42	14
+	+	14	0
+	+	9	14
+	+	7	0
+	+	7	0
+	+	14	0
+	+	12	23
+	+	14	0
+	+	13	29
+	+	8	16
+	+	14	10
+	+	14	16
+	+	15	14
+	+	10	0
+	+	10	0
+	+	12	23
+	+	11	29
+	+	12	48
+	+	12	52
+	+	13	2
+	+	12	0
+	+	13	0
+	+	12	2
+	+	96	30
+	+	14	0
+	+	24	0
+	+	27	0
+	+	44	0
+	+	49	0
+	+	66	0
+	+	73	0
+	+	112	0
+	+	140	0
+	+	149	0
+	+	42	24
+	+	166	28
+	+	168	40
+	+	188	15
+	+	187	21
+	+	188	19
+	+	166	38
+	+	168	30
+	+	166	8
+	+	168	65
+	+	174	71
+	+	167	25
+	+	168	1
+	+	175	1
+	+	96	0
+	+	120	0
+	+	123	27
+	+	163	15
+	+	169	19
+	+	180	22
+	+	169	22
+	+	190	0
+	+	189	16
+	+	118	4
+	+	174	21
+	+	175	0
+	+	118	0
+	+	118	39
+	+	119	21
+	+	118	0
+	+	174	0
+	+	118	5
+	+	119	19
+	+	175	1
+	+	175	29
+	+	151	14
+	+	174	17
+	+	175	2
+	+	179	1
+	+	177	27
+	+	175	2
+	+	176	1
+	+	175	15
+	+	178	1
+	+	177	15
+	+	111	34
+	+	112	41
+	+	113	24
+
 > ~/ssScript.py
-	"	56	2
-	^	32	6
-	.	32	6
-	+	34	1
-	+	35	1
-	+	36	1
-	+	37	1
+	"	31	32
+	^	87	26
+	.	84	0
+	+	38	1
 	+	38	1
 	+	39	1
 	+	40	1
-	+	44	1
+	+	42	1
+	+	43	1
 	+	44	1
 	+	45	1
 	+	46	1
+	+	46	1
+	+	47	1
 	+	48	1
+	+	49	1
 	+	49	1
 	+	50	1
 	+	51	1
 	+	52	1
-	+	52	1
 	+	53	1
 	+	54	1
 	+	55	1
-	+	55	1
 	+	56	1
-	+	57	1
-	+	58	1
-	+	59	1
+	+	57	2
+	+	28	12
+	+	28	5
+	+	28	0
+	+	27	0
+	+	28	0
+	+	27	16
+	+	27	20
+	+	28	5
+	+	28	18
+	+	27	0
+	+	28	0
+	+	34	13
+	+	36	13
+	+	55	14
+	+	50	44
+	+	46	8
+	+	38	0
+	+	46	0
+	+	53	7
+	+	99	18
+	+	21	22
+	+	23	0
+	+	22	12
+	+	41	2
+	+	40	12
+	+	58	2
+	+	59	3
 	+	60	1
 	+	61	1
 	+	62	1
-	+	63	2
-	+	29	12
-	+	29	5
-	+	29	0
-	+	28	0
-	+	29	0
-	+	28	16
-	+	28	20
-	+	29	5
-	+	29	18
-	+	28	0
-	+	29	0
-	+	37	13
-	+	39	13
-	+	61	14
-	+	56	44
-	+	52	8
-	+	44	0
-	+	52	0
-	+	59	7
-	+	111	18
-	+	21	22
-	+	24	0
-	+	23	12
-	+	47	2
-	+	46	12
-	+	64	2
-	+	65	3
-	+	66	1
-	+	67	1
-	+	68	1
-	+	69	1
-	+	68	21
-	+	62	8
-	+	40	8
-	+	39	4
-	+	40	8
+	+	63	1
+	+	62	21
+	+	56	8
+	+	37	8
+	+	36	4
+	+	37	8
 	+	11	25
 	+	13	18
-	+	71	26
+	+	65	26
 	+	15	9
-	+	54	0
-	+	40	38
-	+	62	42
-	+	73	2
-	+	71	29
-	+	72	27
-	+	73	0
-	+	72	22
-	+	89	3
-	+	89	13
-	+	93	14
-	+	89	0
-	+	92	22
-	+	95	15
-	+	94	21
-	+	40	18
-	+	40	15
+	+	48	0
+	+	37	38
+	+	56	42
+	+	67	2
+	+	65	29
+	+	66	27
+	+	67	0
+	+	66	22
+	+	81	3
+	+	81	13
+	+	84	14
+	+	81	0
+	+	84	22
+	+	84	15
+	+	84	21
+	+	37	18
+	+	37	15
 	+	4	60
-	+	96	72
-	+	29	5
-	+	29	0
-	+	33	5
-	+	31	15
-	+	40	0
+	+	84	72
+	+	28	5
+	+	28	0
+	+	30	5
+	+	30	15
+	+	37	0
 	+	22	17
-	+	32	29
-	+	43	3
-	+	40	16
-	+	42	21
-	+	31	6
-	+	32	6
+	+	30	29
+	+	37	3
+	+	37	16
+	+	37	21
+	+	30	6
+	+	30	6
+	+	78	46
+	+	87	25
+	+	22	0
+	+	30	0
+	+	37	0
+	+	68	0
+	+	84	0
 
 > /vol/web/respice/81b4aeaae/81b4aeaae-survey.txt
 	"	1	0

@@ -1,233 +1,3 @@
-ls
-cd ..
-ls
-cd ..
-ls
-cd vol
-ls
-cd home
-ls
-cd gbankman
-ls
-python actionsScript.py 
-vim actionsScript.py 
-python actionsScript.py 
-vim actionsScript.py 
-python actionsScript.py 
-vim actionsScript.py 
-python actionsScript.py 
-ls
-vim actionsScript.py 
-ls
-python actionsScript.py 
-ls
-sudo python actionsScript.py
-ls
-cd ..
-ls
-cd ..
-ls
-cd ..
-ls
-cd ..
-ls
-cd vol/home
-ls
-cd gbankman
-ls
-cd ..
-cd ..
-ls
-cd web
-ls
-cd respice
-ls
-cat actions.txt 
-cd ..
-ls
-cd ..
-ls
-cd home
-ls
-cd gbankman
-ls
-vim actionsScript.py 
-sudo python actionsScript.py 
-cd ..
-cd ..
-ls
-cd web
-ls
-cd respice
-ls
-cat actions.txt 
-ls
-vim actionsScript.py 
-ls
-vim actionsScript.py 
-python actionsScript.py 
-cd ..
-cd ..
-ls
-cd vol
-ls
-cd web
-ls
-cd respice
-ls
-cat sepActions.txt 
-cd ..
-cd ..
-cd ..
-ls
-cd vol
-ls
-cd home
-ls
-cd gbankman/
-ls
-vim actionsScript.py 
-sudo python actionsScript.py 
-vim actionsScript.py 
-sudo python actionsScript.py 
-vim actionsScript.py 
-vim actionsScript.py 
-sudo python actionsScript.py 
-vim actionsScript.py 
-sudo python actionsScript.py 
-vim actionsScript.py 
-sudo python actionsScript.py 
-sudo python actionsScript.py 
-sudo python actionsScript.py 
-sudo python actionsScript.py 
-sudo python actionsScript.py 
-sudo python actionsScript.py 
-sudo python actionsScript.py 
-ls
-cd ..
-cd ..
-ls
-cd vol
-ls
-cd web/respice/
-ls
-cd 007e3a3f0/
-ls
-cat 007e3a3f0.txt 
-cd ..
-find -name *survey*
-cat 66684cd34/
-cd 66684cd34/
-ls
-cat 66684cd34-survey.txt 
-cat 66684cd34.txt 
-:
-ls
-cd ..
-ls
-cat sepActions.txt 
-ls
-ls
-cd ..
-cd ..
-ls
-cd vol
-ls
-cd web
-ls
-cd respice
-ls
-cd c0fe8de08
-ls
-ls
-cat c0fe8de08-survey.txt 
-ls
-rm c0fe8de08-survey.txt 
-ls
-ls
-cd ..
-ls
-cd ..
-ls
-cd home
-ls
-rm testRemoval.txt 
-ls
-rm testRemoval.txt 
-sudo rm testRemoval.txt 
-ls
-cd ..
-ls
-cd vol
-ls
-cd web/respice/
-ls
-cd d000a
-cd d000abe54/
-ls
-cd ..
-find -name *survey*
-cd b562b0600/
-ls
-cd b562b0600-survey.txt 
-cat b562b0600-survey.txt 
-cd ..
-cd 43a1176a0/
-ls
-cd 43a1176a0-survey.txt 
-ls
-cat 43a1176a0-survey.txt 
-python get-pip.py
-sudo curo -0 https://bootstrap.pypa.io/get-pip.py
-sudo curl -0 https://bootstrap.pypa.io/get-pip.py
-pip install matplotlib
-ls
-sudo python get-pip.py
-pip install matplotlib
-ls
-sudo pip install matplotlib
-ls
-cd ..
-ls
-cd ..
-ls
-cd ..
-ls
-cd lib
-ls
-cd ..
-ls
-cd vol
-ls
-cd home
-ls
-cd ..
-ls
-cd vol
-ls
-cd ..
-ls
-cd home
-ls
-cd ..
-ls
-cd ..
-ls
-cd vol
-ls
-cd home
-ls
-ls
-vim testRemoval.txt
-ls
-touch testRemoval.txt
-sudo touch testRemoval.txt
-ls
-ls
-ls
-ls
-cd ..
-ls
 cd home
 ls
 ls
@@ -498,3 +268,233 @@ ls
 cd 2e650f182/
 ls
 cat 2e650f182-survey.txt 
+ls
+vim ssScript.py 
+ls
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+ls
+python ssScript.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScript.py 
+python ssScript.py 
+ls
+vim ssScript.py 
+vim ssScriptNoOutliers.py 
+python ssScript.py 
+python ssScriptNoOutliers.py 
+ls
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScript.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+ls
+ls
+ls
+vim ssScript.py 
+python ssScript.py 
+vim ssScript.py 
+python ssScript.py 
+vim ssScript.py 
+ls
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+ls
+cd ..
+cd ..
+ls
+cd vol
+ls
+cd web
+ls
+cd respice
+ls
+cd ..
+cd ..
+ls
+cd ..
+ls
+ls
+cd vol
+ls
+cd web
+ls
+cd respice
+ls
+cd e42658209/
+ls
+cd ..
+ls
+cd admin6789
+ls
+cd admin6789-survey.txt 
+cat admin6789-survey.txt 
+ls
+cd ..
+cd ..
+ls
+cd vol/web
+ls
+cd respice
+ls
+cat avesurp.csv 
+cat avesus.csv 
+ls
+ls
+cat ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+ls
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 
+python ssScriptNoOutliers.py 
+vim ssScriptNoOutliers.py 

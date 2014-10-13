@@ -2,13 +2,16 @@
 
 #Makes sure that we're always in the right place
 cd /vol/web/respice/
-
+#Wipe the file
+cat /dev/null /vol/web/respice/master-path.txt;
 #For every folder in respice aka each participant
 for d in */ ; do 
 		#Enter their folder
 		cd $d;
 		#Get their username (minus / from the folder name)
 		SUB=`echo $d | cut -d '/' -f 1`;
+		#Write their username before their data
+		echo "&$SUB" >> /vol/web/respice/master-path.txt;
 		#Pipe their data to the master file
 		cat "$SUB.txt" >> /vol/web/respice/master-path.txt;
 		#Add a new line to the master file

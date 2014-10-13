@@ -8,23 +8,26 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/29b5f76de
+~MSle0~/0df
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:q
+:w compile-survey.sh
 :q!
 :w! !sudo tee %
-:w!
 :wq!
-:w
-:w !sudo tee %
+:WQ
 :wq
-:q
+:w !sudo tee %
+:w !sudo tee 
+:w compile-all-fun.sh
+:w!
+:w
 :w! theTrueFile.txt
 :w theTrueFile.txt
-:WQ
 :m 4d25
 :w run.sh
 :w snake_draft.html
@@ -55,6 +58,8 @@ $
 :;
 
 # Search String History (newest to oldest):
+?/0df
+?/91f65
 ?/29b5f76de
 ?/669b7b0fe
 ?/3fce9f1e4
@@ -115,20 +120,31 @@ $
 	a
 
 # File marks:
-'0  17  7  /vol/web/scripts/compile-click-data.sh
-'1  16  31  /vol/web/makeitall.sh
-'2  1  67795  /vol/web/html/ss
-'3  1  0  /vol/web/html/theTrueFile.txt
-'4  1  0  /vol/web/respice/admin6789/admin6789-survey.txt
-'5  1  0  ~/.vimrc
-'6  13  12  ~/.vimrc
-'7  1  1467  ~/theFile.txt
-'8  1  1  ~/addSomeone
-'9  41  40  /vol/web/html/data.php
+'0  1  0  /vol/web/scripts/compile-surveys.sh
+'1  1  0  /vol/web/scripts/compile-click-data.sh
+'2  5  0  /vol/web/scripts/compile-all-fun.sh
+'3  13  48  /vol/web/scripts/compile-all-fun.sh
+'4  13  8  /vol/web/scripts/compile-click-data.sh
+'5  22  0  /vol/web/respice/master-path.txt
+'6  9  0  /vol/web/scripts/makeitall.sh
+'7  1  86  ~/theFile.txt
+'8  17  55  /vol/web/scripts/compile-click-data.sh
+'9  19  7  /vol/web/scripts/compile-click-data.sh
 
 # Jumplist (newest first):
--'  17  7  /vol/web/scripts/compile-click-data.sh
+-'  1  0  /vol/web/scripts/compile-surveys.sh
 -'  1  0  /vol/web/scripts/compile-click-data.sh
+-'  5  0  /vol/web/scripts/compile-all-fun.sh
+-'  1  0  /vol/web/scripts/compile-all-fun.sh
+-'  13  48  /vol/web/scripts/compile-all-fun.sh
+-'  13  8  /vol/web/scripts/compile-click-data.sh
+-'  22  0  /vol/web/respice/master-path.txt
+-'  1  0  /vol/web/respice/master-path.txt
+-'  9  0  /vol/web/scripts/makeitall.sh
+-'  1  0  /vol/web/scripts/makeitall.sh
+-'  1  86  ~/theFile.txt
+-'  17  55  /vol/web/scripts/compile-click-data.sh
+-'  19  7  /vol/web/scripts/compile-click-data.sh
 -'  16  31  /vol/web/makeitall.sh
 -'  1  0  /vol/web/makeitall.sh
 -'  1  67795  /vol/web/html/ss
@@ -136,7 +152,6 @@ $
 -'  1  0  /vol/web/respice/admin6789/admin6789-survey.txt
 -'  1  0  ~/.vimrc
 -'  13  12  ~/.vimrc
--'  1  1467  ~/theFile.txt
 -'  1  1  ~/addSomeone
 -'  41  40  /vol/web/html/data.php
 -'  1  0  /vol/web/html/data.php
@@ -214,48 +229,59 @@ $
 -'  15  71  /vol/home/aloomis/scripts/run-snake.sh
 -'  1  0  /vol/home/aloomis/scripts/run-snake.sh
 -'  133  32  /vol/home/aloomis/jack/src/jack/auctions/Snake.java
--'  12  58  /vol/home/aloomis/JackHelpFile.txt
--'  1  0  /vol/home/aloomis/JackHelpFile.txt
--'  11  0  /vol/home/aloomis/scripts/run-random.sh
--'  1  0  /vol/home/aloomis/scripts/run-random.sh
--'  104  65  /vol/home/aloomis/jack/src/jack/auctions/Snake.java
--'  4  20  /vol/home/aloomis/jack/src/jack/auctions/Snake.java
--'  33  0  /vol/home/aloomis/jack/src/jack/auctions/Snake.java
--'  187  18  /vol/home/aloomis/jack/src/jack/auctions/Snake.java
--'  14  0  /vol/home/aloomis/jack/src/jack/auctions/Snake.java
--'  1  1467  ~/theFile.txt
--'  1  1  ~/addSomeone
--'  41  40  /vol/web/html/data.php
 
 # History of marks within files (newest to oldest):
 
+> /vol/web/scripts/compile-surveys.sh
+	"	1	0
+
 > /vol/web/scripts/compile-click-data.sh
-	"	17	7
-	^	16	21
-	.	16	20
+	"	1	0
+	^	13	9
+	.	13	8
 	+	1	1684
 	+	1	1483
 	+	1	70
 	+	2	5
 	+	4	10
 	+	1	58
-	+	19	0
+	+	21	0
 	+	7	12
-	+	19	0
+	+	21	0
 	+	7	17
 	+	9	8
 	+	11	34
-	+	13	53
-	+	15	63
-	+	18	0
+	+	15	53
+	+	17	63
+	+	20	0
 	+	2	0
 	+	3	47
 	+	6	48
 	+	8	20
 	+	10	51
-	+	12	36
-	+	14	35
-	+	16	20
+	+	14	36
+	+	16	35
+	+	18	20
+	+	15	51
+	+	17	55
+	+	15	0
+	+	13	8
+
+> /vol/web/scripts/compile-all-fun.sh
+	"	5	0
+	^	13	49
+	.	13	48
+	+	12	35
+	+	13	48
+
+> /vol/web/respice/master-path.txt
+	"	22	0
+
+> /vol/web/scripts/makeitall.sh
+	"	9	0
+
+> ~/theFile.txt
+	"	1	86
 
 > /vol/web/makeitall.sh
 	"	16	31
@@ -287,9 +313,6 @@ $
 	^	13	13
 	.	14	0
 	+	14	0
-
-> ~/theFile.txt
-	"	1	1467
 
 > ~/addSomeone
 	"	1	1

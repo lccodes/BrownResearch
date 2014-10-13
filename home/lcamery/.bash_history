@@ -1,193 +1,3 @@
-vim admin6789-survey.txt 
-cat admin6789-survey.txt 
-vim admin6789-survey.txt 
-cat admin6789-survey.txt 
-cat admin6789-survey.txt 
-cd /vol/web/html/
-ls
-ls -l
-ls
-ssh jack
-cd /vol/web/respice/test56789/
-ls
-ls
-cat test56789-survey.txt 
-cat test56789-survey.txt 
-cat test56789-survey.txt 
-cat test56789-survey.txt 
-cd /vol/web/html/
-sudo vim extension.html 
-sudo mv BrownFF.crx /vol/web/html/
-cd /vol/web/html/
-ls
-ls -l
-sudo chmod 444 BrownFF.crx 
-ls -l
-ls
-sudo rm /vol/web/html/BrownFF.crx 
-sudo mv BrownFF.crx /vol/web/html/ 
-sudo chmod 444 /vol/web/html/BrownFF.crx 
-ls -l /vol/web/html/
-sudo rm /vol/web/html/BrownFF-master.crx 
-ls
-sudo vim addSomeone 
-ks
-ls
-bash addSomeone hello s l
-sudo vim theFile.txt 
-sudo vim ddd
-cd /vol/web/respice/
-ls
-ls -l
-cat undefined.txt 
-ls
-cat views.txt 
-ls
-cd 1432cf5bc/
-ls
-cat 1432cf5bc.txt 
-cd ..
-ls
-cd abcde6789/
-ls
-cat abcde6789.txt 
-ls
-cd ..
-ls
-cat views.txt 
-cd db920f9e6/
-ls
-cat db920f9e6
-cat db920f9e6.txt 
-ls
-cat db920f9e6-happy.txt 
-cd ..
-ls
-find -name *happy.txt
-cat undefined-happy.txt 
-cd 06c894610/
-cat 06c894610-
-cat 06c894610-happy.txt 
-ls
-cat 06c894610-survey.txt 
-ls
-cd ..
-ls
-cd 0e7126bb0/
-ls
-cat 0e7126bb0-happy.txt 
-cd ..
-ls
-cd 10fa4799e/
-ls
-cd ..
-find -name *survey*
-cd 2e650f182/
-ls
-cat 2e650f182-happy.txt 
-ls
-ls
-cd /vol/web/
-ls
-cd respice/
-find *survey*
-find -name *survey*
-fine -name *happy*
-find -name *happy*
-find -R -name *happy*
-find --help
-find -H help
-find -H --help
-help find
-man find
-ls
-cd /vol/web/
-ls
-cd respice/
-ls
-cd admin6789/
-ls
-cd cat admin6789-survey.txt 
-cat admin6789-survey.txt 
-cd /vol/web/html/
-ls
-cd ..
-cd respice/
-find -name *survey*
-find . -name *survey* | awk '{n++;print}END{print n}'
-ls
-cd ..
-ls
-cd ..
-cd vol/home/
-ls
-cd ..
-cd /vol/web/html/
-ls
-cd ..
-cd respice/
-ls
-cd 66684cd34/
-ls
-cat 66684cd34-survey.txt 
-cat 66684cd34-survey.txt 
-ls
-cd ..
-ls
-cd 66684cd34/
-ls
-cd 66684cd34.txt 
-ls
-cat 66684cd34.txt 
-cat 66684cd34.txt 
-cat 66684cd34.txt 
-cat 66684cd34.txt 
-cd ..
-cat 66684cd34/
-cd 66684cd34/
-ls
-cat 66684cd34-survey.txt 
-cat 66684cd34-survey.txt 
-cat 66684cd34-survey.txt 
-cat 66684cd34-happy.txt 
-cd ..
-find -ame *happy *
-find -name *happy *
-find . -name *happy *
-find . -name *happy*
-ls
-cat undefined-happy.txt 
-cat 66684cd34/66684cd34-happy.txt 
-ls
-cd /vol/web/
-cd html/
-ls
-vim theTrueFile.txt 
-vim ss
-cd /vol/web/html/
-vim ss
-ls -l
-sudo chmod 444 theTrueFile.txt 
-ls
-ls -l
-sudo chown root theTrueFile.txt 
-ls -l
-sudo chgrp root theTrueFile.txt 
-ls
-ls -l
-sudo chgrp lroot theTrueFile.txt 
-sudo chown lroot theTrueFile.txt 
-cd ..
-cd respice/66684cd34/
-ls
-ls -l
-sudo chown root 66684cd34-survey.txt 
-sudo chmod 777 66684cd34-survey.txt 
-ls -l
-cd ..
-ls
-mkdir 1a2b3c4d5
-ls
 cd 1a
 cd 1a2b3c4d5/
 ld
@@ -498,3 +308,193 @@ git status
 git pull git@github.com:lccodes/BrownResearch.git
 sudo
 sudo su
+ls
+cd ../..
+ls
+cd vol/
+ls
+cd home/aloomis/
+ls
+cd ..
+ls
+cd ...
+cd ..
+ls
+git add -A home/
+sudo su
+ls
+cd /vol/web/html/
+ls
+cd ..
+cd respice/
+ls
+find -name "happy"
+find -name *happy*
+find *happy*
+find -R *happy*
+find
+find --help
+cd ..
+ls
+cd scripts/
+ls
+vim compile-click-data.sh 
+ls
+sudo vim compile-click-data.sh 
+sudo vim compile-click-data.sh 
+ls
+ls
+compile-all-fun.sh
+sh compile-all-fun.sh 
+cd ..
+cd respice/
+ls
+cat total-fun.txt 
+cat sepActions.txt 
+cat total-fun.txt 
+ls
+cat master-path.txt 
+ls
+cat master-path.txt 
+ls
+ls
+ls
+cd ..
+ls
+cd respice/
+cat views.txt 
+cd ..
+ls
+ls
+cat addSomeone 
+/bin/mail -s "Test" "lcamery@cs.brown.edu" "One small step for Jack, one giant leap for science kind"
+cd ../..
+ls
+cd mail
+apt-get mail
+yum
+sudo apt-get install postfix
+telnet localhost 25
+telnet cs.brown.edu 25
+ls
+cd /vol/web/respice/
+ls
+cd b8f49e310/
+ls
+cat b8f49e310-happy.txt 
+cat b8f49e310-survey.txt 
+cat b8f49e310-happy.txt 
+cd ..
+cd 91f65382a/
+ls
+cat 91f65382a
+cat 91f65382a.txt 
+ls
+cat 91f65382a-happy.txt 
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd home/
+ls
+cd lcamery/
+ls
+cat theFile.txt 
+vim theFile.txt 
+cd /vol/web/respice/
+ls
+cd 91f65382a/
+ls
+rm 91f65382a-happy.txt 
+rm 91f65382a-survey.txt 
+rm 91f65382a.txt 
+ls
+cd ..
+cd 58313777a/
+ls
+ls
+cat 58313777a-happy.txt 
+cat 58313777a-survey.txt 
+cd ..
+ls
+cd 5066b2220/
+ls
+cat 5066b2220-happy.txt 
+cat 5066b2220
+cat 5066b2220.txt 
+vim /vol/home/lcamery/theFile.txt 
+cd ..
+cd bcb418906/
+ls
+cat bcb418906-survey.txt 
+cd ..
+ls
+vim /vol/home/lcamery/theFile.txt 
+ls
+cd 0df2a3e83/
+cat 0df2a3e83
+cat 0df2a3e83.txt 
+
+vim /vol/home/lcamery/theFile.txt 
+ls
+cd /vol/web/respice/master-path.txt 
+cd /vol/web/respice/
+cat master-path.txt 
+cd ..
+ls
+cd scripts/
+ls
+vim makeitall.sh 
+vim compile-click-data.sh 
+sh compile-click-data.sh 
+rm -rf /vol/web/respice/test56789/
+rm -rf /vol/web/respice/admin6789/
+sh compile-click-data.sh 
+vim /vol/web/respice/master-path.txt 
+cat /vol/web/respice/master-path.txt 
+vim compile-click-data.sh 
+sh compile-click-data.sh 
+vim compile-click-data.sh 
+sh compile-click-data.sh 
+cat /vol/web/respice/master-path.txt 
+cat /vol/web/respice/total-fun.txt 
+vim compile-all-fun.sh 
+cat compile-all-fun.sh 
+sh compile-all-fun.sh 
+ls
+cat /vol/web/respice/total-fun.txt 
+vim compile-all-fun.sh 
+sudo vim compile-all-fun.sh &
+sudo vim compile-all-fun.sh
+sudo vim compile-click-data.sh 
+cat compile-all-fun.sh 
+sh compile-all-fun.sh 
+cat /vol/web/respice/total-fun.txt 
+sh compile-click-data.sh 
+cat /vol/web/respice/master-path.txt 
+cat /vol/web/respice/views.txt 
+ls
+vim compile-click-data.sh 
+sudo vim compile-click-data.sh 
+chmod 660 compile-surveys.sh 
+sudo chmod 660 compile-surveys.sh 
+vim compile-surveys.sh 
+sudo vim compile-surveys.sh 
+cat compile-all-fun.sh 
+ls /vol/web/respice/ad98fad27/
+ls /vol/web/respice/abcde6789/
+ls
+vim compile-surveys.sh 
+ls -l
+sudo chmod 777 *.sh
+ls -l
+vim compile-surveys.sh 
+sh compile-surveys.sh 
+cat /vol/web/respice/survey-data.txt 
+sftp lcamery
+sftp lcamery@cs.brown.edu
+sftp lcamery@ssh.cs.brown.edu
+sftp lcamery@ssh.cs.brown.edu
+sftp lcamery@ssh.cs.brown.edu

@@ -19,7 +19,6 @@ def parseFile(hString, suspense, surprise, userNums, fileName):
 				data.remove("")
 			curLen = len(data)
 			if curLen == lenSur:
-				print fileName
 				sOne += 1
 				data[lenSur - 1] = data[lenSur - 1].split(",")[0]
 				curSur = 0
@@ -28,8 +27,6 @@ def parseFile(hString, suspense, surprise, userNums, fileName):
 						cur = float(data[elNum].split(":")[1])
 						if cur > 1:
 							cur = cur/100
-						print cur
-						print lastSurvey[elNum]
 						#here we increment the surprise
 						curSur += (cur - lastSurvey[elNum])**2
 						data[elNum] = cur
@@ -37,9 +34,6 @@ def parseFile(hString, suspense, surprise, userNums, fileName):
 						print	29
 					except:
 						print 31
-				print curSur
-				if(curSur >= .5):
-					print "OVER HERE"
 				tempSurprise.append(round(curSur, 8))
 				lastSurvey = data
 			elif curLen == 2*lenSur:
@@ -71,8 +65,6 @@ def parseFile(hString, suspense, surprise, userNums, fileName):
 			if(len(tempSurprise) > 0):
 				tempSurprise[0] = 0.0
 			surprise += tempSurprise
-	else:
-		print "Uhoh!"
 #suspense - the x axis
 suspense = []
 #surprise - the y axis
@@ -83,20 +75,16 @@ userNums = []
 allSurveyResults = {}
 os.chdir("../../web/respice")
 for file in os.listdir(os.getcwd()):
-	if(os.path.isdir(file)):
+	if(os.path.isdir(file) and file != "admin6789"):
 		for innerFile in os.listdir(file):
 			if fnmatch.fnmatch(innerFile, file + '-survey.txt'):
 				os.chdir(file)
 				myFile = open(innerFile, "r")
 				hString = myFile.readlines()
-				if(len(hString) > 0):
-					if(hString[0] != ""):
-						print hString[0]
-						print file
 				parseFile(hString, suspense, surprise, userNums, file + '-survey.txt')
 				os.chdir("..")
 
-toWrite = open("ssdata.txt", "w")
+toWrite = open("ssdata.csv", "w")
 for susp in suspense:
 	toWrite.write(str(susp) + ",")
 toWrite.write("\n")
