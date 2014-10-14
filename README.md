@@ -14,7 +14,7 @@ which can accomodate command line clients, web clients, and agents together.
 #History of Jack
 For full development history and usage see JackHelpFile.txt
 
-- New Developments by lccodes:
+- New Developments by lccodes (aka root):
   	1. Random and Psuedo Random Auctions (web compatible)
   	2. First and Second Price sealed bid auctions (w.c.)
   	3. Recovery auctions, which allow for the restart to the second of the current sequence

@@ -1,23 +1,3 @@
-cd 1a
-cd 1a2b3c4d5/
-ld
-ls
-ls
-touch 1a2b3c4d5.txt
-ls
-ls -l
-cd ..
-sudo chmod sudo chmod -R 777 1a2b3c4d5/
-sudo chmod -R 777 1a2b3c4d5/
-ls -l 1a2b3c4d5/\
-ls -l 1a2b3c4d5/
-cd ..
-cd html/
-ls
-sudo vim dss
-ls -l
-sudo vim ss
-sudo vim ss
 sudo vim ss
 la
 sl
@@ -498,3 +478,23 @@ sftp lcamery@cs.brown.edu
 sftp lcamery@ssh.cs.brown.edu
 sftp lcamery@ssh.cs.brown.edu
 sftp lcamery@ssh.cs.brown.edu
+sudo su
+sudo su
+ssh-add
+ssh-agent -s
+ssh-add /vol/home/lcamery/.ssh/mykey
+cd ../...
+cd ../..
+ls
+ssh-agent
+ssh-add
+cd vol/
+ls
+git
+git push
+ssh-add /vol/home/lcamery/.ssh/mykey
+ssh-open
+ssh
+ssh -T git@github.com
+ssh-keyscan /vol/home/lcamery/.ssh/mykey
+ssh-keyscan /vol/home/lcamery/.ssh/mykey.pub 
